@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'myriad';
+    src: url('fontas/Myriad Pro Regular.ttf');
+}
+
+*{
+    font-size:12px; 
+   font-family: myriad;
+}
+
+header{
+    width: 100%;
+    padding: 12px;
+    background-color: #2f364a;
+    text-decoration: none;
+color:#78829d;
+display: grid;
+grid-template-columns: 1fr 90px 90px 90px;
+}
+header div {
+text-decoration: none;
+}
+.header-icona{
+    text-align: center;
+  
+}
+.header-login {
+    
+    text-decoration: none;
+    color:white;
+    
+   
+  }
+.header-support{
+    text-decoration: none;
+    color:#dfe1e8;
+    
+}
+.header-help{
+    text-decoration: none;
+    color:#dfe1e8; 
+  
+    
+}
