@@ -3,79 +3,89 @@
     src: url('fontas/Myriad Pro Regular.ttf');
 }
 
-*{
-    font-size:12px; 
-   font-family: myriad;
+* {
+    font-size: 12px;
+    font-family: myriad;
 }
 
-header{
+header {
     width: 100%;
     padding: 12px;
     background-color: #2f364a;
     text-decoration: none;
-color:#78829d;
-display: grid;
-grid-template-columns: 1fr 65px 80px 80px;
-}
-header div {
-text-decoration: none;
-}
-.header-icona{
-    text-align: center;
-  
-}
-.header-login {
-    
-    text-decoration: none;
-    color:white;
-    
-   
-  }
-.header-support{
-    text-decoration: none;
-    color:#dfe1e8;
-    text-align: left;
-    
-}
-.header-help{
-    text-decoration: none;
-    color:#dfe1e8; 
-    text-align: right;
-  
-    
-}
-
-footer{
-    width: 100%;
-    padding: 12px;
-    background-color: #2f364a;
-    color:white;
+    color: #78829d;
     display: grid;
-grid-template-columns: 1fr 135px 55px 35px;
+    grid-template-columns: 1fr 65px 80px 80px;
+}
+
+header div {
+    text-decoration: none;
+}
+
+.header-icona {
+    text-align: center;
+
+}
+
+.header-login {
+
+    text-decoration: none;
+    color: white;
 
 
 }
-.footer-nav{
+
+.header-support {
+    text-decoration: none;
+    color: #dfe1e8;
+    text-align: left;
+
+}
+
+.header-help {
+    text-decoration: none;
+    color: #dfe1e8;
+    text-align: right;
+
+
+}
+
+footer {
+    width: 100%;
+    padding: 12px;
+    background-color: #2f364a;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 135px 55px 35px;
+
+
+}
+
+.footer-nav {
     text-align: center;
     font-size: 23px;
-    
+
     color: #00ff66;
     color: #6fccdd;
 }
-.vidurys{
-    width:100%;
+
+.vidurys {
+    width: 100%;
     display: grid;
-grid-template-columns: 200px 1fr;
+    grid-template-columns: 200px 1fr;
 }
-.footer-help{
+
+.footer-help {
     padding-top: 6px;
 }
-.footer-settings{
+
+.footer-settings {
     padding-top: 6px;
-   
-    
+
+
 }
-.footer-button{
+
+.footer-button {
     height: 23px;
     width: 24px;
     text-align: center;
@@ -83,4 +93,28 @@ grid-template-columns: 200px 1fr;
     background-color: #6fccdd;
     border-radius: 50%;
     border: none;
+}
+
+.nav {
+    width: 200px;
+    height: 100%;
+    background-color: #1f2637;
+}
+
+.nav a {
+    background-color: #1f2637;
+    color: #78829d;
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    background-color: #15a4fa;
+    color: aliceblue;
+}
+
+.nav a.active {
+    background-color: green;
+    color: #ffffff;
 }
