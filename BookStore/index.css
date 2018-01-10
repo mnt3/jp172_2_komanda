@@ -15,7 +15,7 @@ header{
     text-decoration: none;
 color:#78829d;
 display: grid;
-grid-template-columns: 1fr 90px 90px 90px;
+grid-template-columns: 1fr 65px 80px 80px;
 }
 header div {
 text-decoration: none;
@@ -34,11 +34,53 @@ text-decoration: none;
 .header-support{
     text-decoration: none;
     color:#dfe1e8;
+    text-align: left;
     
 }
 .header-help{
     text-decoration: none;
     color:#dfe1e8; 
+    text-align: right;
   
     
+}
+
+footer{
+    width: 100%;
+    padding: 12px;
+    background-color: #2f364a;
+    color:white;
+    display: grid;
+grid-template-columns: 1fr 135px 55px 35px;
+
+
+}
+.footer-nav{
+    text-align: center;
+    font-size: 23px;
+    
+    color: #00ff66;
+    color: #6fccdd;
+}
+.vidurys{
+    width:100%;
+    display: grid;
+grid-template-columns: 200px 1fr;
+}
+.footer-help{
+    padding-top: 6px;
+}
+.footer-settings{
+    padding-top: 6px;
+   
+    
+}
+.footer-button{
+    height: 23px;
+    width: 24px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #6fccdd;
+    border-radius: 50%;
+    border: none;
 }
