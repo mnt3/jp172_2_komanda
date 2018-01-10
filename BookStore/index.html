@@ -5,68 +5,146 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>BookStore</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="fontas/font-awesome/css/font-awesome.min.css">
 </head>
 
 <body>
     <header>
-        <div class="header-icona"><i class="fa fa-book" aria-hidden="true">&nbsp</i> Book store</div>
-
-        <div><a href="#" class="header-help" id="Help">Help Center</a></div>
-        <div><a href="#" class="header-support" id="Support">Our Support</a></div>
-        <div><a href="#" class="header-login" id="Loginform">Login &nbsp<i class="fa fa-chevron-circle-down" aria-hidden="true"></i></a></div>
-
-
+        <div class="header-icona">
+            <p>
+                <i class="fa fa-book" aria-hidden="true"></i>Book Store</p>
+        </div>
+        <div class="header-right">
+            <div class="help">
+                <a href="#" class="header-help" id="Help">Help Center</a>
+                <a href="#" class="header-support" id="Support">Our Support</a>
+            </div>
+            <div class="login">
+                <a href="#" class="header-login" id="Loginform">Login
+                    <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
     </header>
 
     <section class="vidurys">
         <nav>
             <div class="nav">
-                <a href="#" class="nav-button"><i class="fa fa-globe" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Browse</a>
-                <a href="#" class="nav-button"><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Buy Books</a>
-                <a href="#" class="nav-button"><i class="fa fa-star" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Favourite Books</a>
-                <a href="#" class="nav-button"><i class="fa fa-th-list" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Wishlist</a>
+                <a href="#" class="nav-button">
+                    <i class="fa fa-globe" aria-hidden="true"></i> Browse</a>
+                <a href="#" class="nav-button">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i> Buy Books</a>
+                <a href="#" class="nav-button">
+                    <i class="fa fa-star" aria-hidden="true"></i> Favourite Books</a>
+                <a href="#" class="nav-button">
+                    <i class="fa fa-th-list" aria-hidden="true"></i> Wishlist</a>
             </div>
         </nav>
 
         <main>
-
-
-            <div>
-                <p>Mainas</p>
-            </div>
-
-
+            <section class="search-panel">
+                <h2>Browse Available Books</h2>
+                <section class="filter">
+                    <section class="filter-buttons">
+                        <div class="filter-button" id="filter-button-selected">
+                            <p class="filter-button-text">All Books</p>
+                        </div>
+                        <div class="filter-button">
+                            <p class="filter-button-text">Most Recent</p>
+                        </div>
+                        <div class="filter-button">
+                            <p class="filter-button-text">Most Popular</p>
+                        </div>
+                        <div class="filter-button">
+                            <p class="filter-button-text">Free Books</p>
+                        </div>
+                    </section>
+                    <section class="search-container">
+                        <label for="search-input">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </label>
+                        <input id="search-input" type="text" class="form-control input-lg" placeholder="Enter Keywords" tabindex="1">
+                    </section>
+                </section>
+            </section>
+            <section class="books">
+                <div class="book">
+                    <img src="img/book_store/books/book-01.png" alt="cover">
+                    <h4>Book</h4>
+                    <p>Author</p>
+                </div>
+                <div class="book">
+                    <img src="img/book_store/books/book-02.png" alt="cover">
+                    <h4>Book</h4>
+                    <p>Author</p>
+                </div>
+                <div class="book">
+                    <img src="img/book_store/books/book-03.png" alt="cover">
+                    <h4>Book</h4>
+                    <p>Author</p>
+                </div>
+                <div class="book">
+                    <img src="img/book_store/books/book-04.png" alt="cover">
+                    <h4>Book</h4>
+                    <p>Author</p>
+                </div>
+                <div class="book">
+                    <img src="img/book_store/books/book-05.png" alt="cover">
+                    <h4>Book</h4>
+                    <p>Author</p>
+                </div>
+                <div class="book">
+                    <img src="img/book_store/books/book-06.png" alt="cover">
+                    <h4>Book</h4>
+                    <p>Author</p>
+                </div>
+                <div class="book">
+                    <img src="img/book_store/books/book-07.png" alt="cover">
+                    <h4>Book</h4>
+                    <p>Author</p>
+                </div>
+                <div class="book">
+                    <img src="img/book_store/books/book-08.png" alt="cover">
+                    <h4>Book</h4>
+                    <p>Author</p>
+                </div>
+                <div class="book">
+                    <img src="img/book_store/books/book-09.png" alt="cover">
+                    <h4>Book</h4>
+                    <p>Author</p>
+                </div>
+                <div class="book">
+                    <img src="img/book_store/books/book-10.png" alt="cover">
+                    <h4>Book</h4>
+                    <p>Author</p>
+                </div>
+            </section>
         </main>
     </section>
     <footer>
 
-        <div class="footer-nav">
-            <button class="footer-button" type="button"><</button>
-            <button class="footer-button" type="button"> &nbsp&nbsp </button>
-            <button class="footer-button" type="button"> &nbsp&nbsp </button>
-            <button class="footer-button" type="button"> &nbsp&nbsp </button>
-            <button class="footer-button" type="button"> ></button>
-
-
-
-
-        </div>
-        <div></div>
-        <div class="footer-help">
-            <img src="img/footer/support.png" alt="">
-        </div>
-
-        <div class="footer-settings">
-            <img src="img/footer/settings.png" alt="">
-
-        </div>
-
+        <section class="footer-nav">
+            <section class="footer-buttons">
+                <button class="footer-button" type="button">&lt;</button>
+                <button class="footer-button" type="button">&nbsp;</button>
+                <button class="footer-button" type="button">&nbsp;</button>
+                <button class="footer-button" type="button">&nbsp;</button>
+                <button class="footer-button" type="button" id="footer-button-active">&nbsp;</button>
+                <button class="footer-button" type="button">&nbsp;</button>
+                <button class="footer-button" type="button">&gt;</button>
+            </section>
+        </section>
+        <section class="footer-right">
+            <div class="footer-help">
+                <i class="fa fa-question-circle" aria-hidden="true"></i>
+            </div>
+            <div class="footer-settings">
+                <i class="fa fa-cog" aria-hidden="true"></i>
+            </div>
+        </section>
     </footer>
-
-
 </body>
 
 </html>
