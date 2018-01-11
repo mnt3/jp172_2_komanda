@@ -16,12 +16,12 @@ html, body {
 
 header {
     display: flex;
-    height: 5%;
+    height: 45px;
+    width: 100%;
     padding-right: 0;
     background-color: #2f364a;
     text-decoration: none;
     color: #78829d;
-
 }
 
 .header-icona {
@@ -66,7 +66,8 @@ header {
 }
 
 .vidurys {
-    height: 90%;
+    width: 100%;
+    height: 80%;
     display: grid;
     grid-template-columns: 200px 1fr;
 }
@@ -154,10 +155,11 @@ header {
     margin-top: -10px;
 }
 
-.search-container label {
+.fa-search {
     color: #8c97b2;
+    float: right;
     position: relative;
-    left: 410px;
+    right: 30px;
     top: 2px;
     font-size: 20px;
 }
@@ -183,6 +185,7 @@ input[type=text]:focus {
     width: 100%;
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
+    padding-bottom: 50px;
   }
 
 .book {
@@ -191,15 +194,18 @@ input[type=text]:focus {
 }
 
 .book img {
-    width: 170px;
+    width: 200px;
 }
 
 footer {
     display: flex;
-    height: 5%;
+    height: 45px;
     padding-right: 0;
     background-color: #2f364a;
     color: white;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
 }
 
 .footer-nav {
