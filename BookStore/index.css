@@ -67,7 +67,7 @@ header {
 
 .vidurys {
     width: 100%;
-    height: 80%;
+    height: 100%;
     display: grid;
     grid-template-columns: 200px 1fr;
 }
@@ -253,6 +253,9 @@ footer {
 
 #footer-button-active {
     background-color: #00ff66;
+}
+#footer-button-noactive {
+    background-color: #6fccdd;
 }
 
 i {
