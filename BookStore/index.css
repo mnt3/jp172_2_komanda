@@ -10,6 +10,8 @@
 }
 
 html, body {
+    overflow-x: hidden; 
+    overflow-y: hidden;
     height: 100%;
     margin: 0px;
 }
@@ -74,7 +76,7 @@ header {
 
 .nav {
     width: 200px;
-    height: 100%;
+    height: 9000%;
     background-color: #1f2637;
 }
 
@@ -183,9 +185,13 @@ input[type=text]:focus {
 
 .books {
     width: 100%;
+    min-height: 68.59vh;
+    height: 68.6vh;
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
     padding-bottom: 50px;
+    overflow-y: auto;
+    overflow-x: scroll;
   }
 
 .book {
