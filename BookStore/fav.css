@@ -1,0 +1,57 @@
+@font-face {
+    font-family: 'myriad';
+    src: url('fontas/Myriad Pro Regular.ttf');
+}
+
+.fav-name-panel {
+    height: 80px;
+    background-color: #eef1f7;
+    border-bottom: #dadfea solid 1px;
+}
+.fav-name-panel h2 {
+    padding-top: 30px;
+    padding-left: 24px;
+    font-size: 22px;
+    color: #444c63;
+}
+
+.fav-books {
+    width: 100%;
+    padding-top: 5px;
+    height: 80%;
+    display: grid;
+    grid-template-columns: 49% 49%;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+.fav-book {
+    margin: auto;
+    width: 99%;
+    padding-left: 10px;
+    padding: 5px;
+}
+.fav-book-info {    
+    padding-top: 16px;
+}
+.fav_card {
+    width: 98%;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
+    display: grid;
+    grid-template-columns: 100px 85%;
+    border-bottom: 1px solid #888888;
+    border-right: 1px solid #888888;
+    background-color: #f0f0f0;
+    border-radius: 7px;
+    box-shadow: 0.03cm 0.03cm 0;
+}
+.fav-book img {
+    width: 70%;
+    padding-bottom: 5px;
+}
+img.img_fav_rating_star
+{
+    height: 10px;
+    width: 10px;
+}
