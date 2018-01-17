@@ -262,3 +262,91 @@ i {
     padding-left: 5px;
     padding-right: 5px;
 }
+/*Support html stiliai*/
+.SupportCenter{
+    display: flex;
+}
+.support{
+    padding-top:10px; 
+    padding-left: 15px;
+   
+}
+.support h2{
+    padding-bottom: 15px;
+}
+.Contacts{
+    padding: 10px;
+}
+.Contacts p{
+    padding: 5px;
+}
+
+
+.support-comment{-webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid #DDDDDD;
+
+  }
+
+  /*Help Center styles */
+.helpCenter{
+     display: flex;
+   
+}
+.helpCenter p{
+    padding: 5px;
+     font-size: 12px;
+}
+.helpCenter div {
+    padding: 10px;
+}
+
+  
+
+/* Settings style*/
+.settings{
+    display: flex;
+    padding: 10px;
+}
+.settings div {
+    padding: 10px;
+}
+.style-bottom-black{
+   background-color: #2f364a; 
+    color:white;
+}
+.style-bottom-blue{
+   background-color:darkblue;
+      color:white;
+}
+.style-bottom-green{
+   background-color:darkolivegreen;
+      color:white;
+}
+/* stars rating*/
+img .img_rating_star
+{
+    width: 13px;
+    height: 13px;
+}
+
+/* hide unuse sections*/
+
+.login-section{
+  //  display: none;
+
+}
+.helpCenter{
+  //  display: none;
+}
+.SupportCenter{
+  //  display: none;
+}
+.settings{
+  //  display: none;
+}
