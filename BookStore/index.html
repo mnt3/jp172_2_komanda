@@ -18,11 +18,11 @@
         </div>
         <div class="header-right">
             <div class="help">
-                <a href="#" class="header-help" id="Help">Help Center</a>
-                <a href="#" class="header-support" id="Support">Our Support</a>
+                <a href="#" class="header-help" id="Help" onclick="help()">Help Center</a>
+                <a href="#" class="header-support" id="Support" onclick="support()">Our Support</a>
             </div>
             <div class="login">
-                <a href="#" class="header-login" id="Loginform">Login
+                <a href="#" class="header-login" id="Loginform" onclick="login()">Login
                     <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
                 </a>
             </div>
@@ -32,25 +32,20 @@
     <section class="vidurys">
         <nav>
             <div class="nav">
-                <a href="#" class="nav-button">
+                <a href="#" class="nav-button" onclick="browse()">
                     <i class="fa fa-globe" aria-hidden="true"></i> Browse</a>
-                <a href="#" class="nav-button">
+                <a href="#" class="nav-button" onclick="buyBooks()">
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i> Buy Books</a>
-                <a href="#" class="nav-button">
+                <a href="#" class="nav-button" onclick="favoriteBooks()">
                     <i class="fa fa-star" aria-hidden="true"></i> Favourite Books</a>
-                <a href="#" class="nav-button">
+                <a href="#" class="nav-button" onclick="wishlist()">
                     <i class="fa fa-th-list" aria-hidden="true"></i> Wishlist</a>
             </div>
         </nav>
 
         <main>
 
-
-
-
-
-
-<section class="Browser-section">
+<section id="browse">
             <section class="search-panel">
                 <h2>Browse Available Books</h2>
                 <section class="filter">
@@ -127,7 +122,245 @@
                 </div>
             </section>
 </section>
-<section class="login-section">
+<section id="buyBooks">
+            <!-- Buy books -->
+
+    <section class="search-panel">
+        <h2>Buy Books</h2>
+        <section class="filter">
+            <section class="filter-buttons">
+                <div class="filter-button" id="filter-button-selected">
+                    <p class="filter-button-text">All Books</p>
+                </div>
+                <div class="filter-button">
+                    <p class="filter-button-text">Most Recent</p>
+                </div>
+                <div class="filter-button">
+                    <p class="filter-button-text">Most Popular</p>
+                </div>
+                <div class="filter-button">
+                    <p class="filter-button-text">Free Books</p>
+                </div>
+            </section>
+            <section class="search-container">
+                <span class="fa fa-search"></span>
+                <input id="search-input" type="text" class="form-control input-lg" placeholder="Enter Keywords" tabindex="1">
+            </section>
+        </section>
+    </section>
+            <section class="books">
+                <div class="book" id="book1">
+                    <img src="img/book_store/books/book-01.png" alt="cover">
+                    <h4 id="buyBooks-title1">Book</h4>
+                    <p id="buyBooks-author1">Author</p>
+                    <div class="price">
+                        <p>Price: </p>
+                        <p id="buyBooks-bookprice1">9.99 Eur</p>
+                    </div>
+                    <button class="buybook" id="buybook1" type="button">Add to Wishlist</button>
+                </div>
+                <div class="book" id="book2">
+                    <img src="img/book_store/books/book-02.png" alt="cover">
+                    <h4 id="buyBooks-title2">Book</h4>
+                    <p id="buyBooks-author2">Author</p>
+                    <div class="price">
+                        <p>Price: </p>
+                        <p id="buyBooks-bookprice2">9.99 Eur</p>
+                    </div>
+                    <button class="buybook" id="buybook2" type="button">Add to Wishlist</button>
+                </div>
+                <div class="book" id="book3">
+                    <img src="img/book_store/books/book-03.png" alt="cover">
+                    <h4 id="buyBooks-title3">Book</h4>
+                    <p id="buyBooks-author3">Author</p>
+                    <div class="price">
+                        <p>Price: </p>
+                        <p id="buyBooks-bookprice3">9.99 Eur</p>
+                    </div>
+                    <button class="buybook" id="buybook3" type="button">Add to Wishlist</button>
+                </div>
+                <div class="book" id="book4">
+                    <img src="img/book_store/books/book-04.png" alt="cover">
+                    <h4 id="buyBooks-title4">Book</h4>
+                    <p id="buyBooks-author4">Author</p>
+                    <div class="price">
+                        <p>Price: </p>
+                        <p id="buyBooks-bookprice4">9.99 Eur</p>
+                    </div>
+                    <button class="buybook" id="buybook4" type="button">Add to Wishlist</button>
+                </div>
+                <div class="book" id="book5">
+                    <img src="img/book_store/books/book-05.png" alt="cover">
+                    <h4 id="buyBooks-title5">Book</h4>
+                    <p id="buyBooks-author5">Author</p>
+                    <div class="price">
+                        <p>Price: </p>
+                        <p id="buyBooks-bookprice5">9.99 Eur</p>
+                    </div>
+                    <button class="buybook" id="buybook5" type="button">Add to Wishlist</button>
+                </div>
+                <div class="book" id="book6">
+                    <img src="img/book_store/books/book-06.png" alt="cover">
+                    <h4 id="buyBooks-title6">Book</h4>
+                    <p id="buyBooks-author6">Author</p>
+                    <div class="price">
+                        <p>Price: </p>
+                        <p id="buyBooks-bookprice6">9.99 Eur</p>
+                    </div>
+                    <button class="buybook" id="buybook6" type="button">Add to Wishlist</button>
+                </div>
+                <div class="book" id="book7">
+                    <img src="img/book_store/books/book-07.png" alt="cover">
+                    <h4 id="buyBooks-title7">Book</h4>
+                    <p id="buyBooks-author7">Author</p>
+                    <div class="price">
+                        <p>Price: </p>
+                        <p id="buyBooks-bookprice7">9.99 Eur</p>
+                    </div>
+                    <button class="buybook" id="buybook7" type="button">Add to Wishlist</button>
+                </div>
+                <div class="book" id="book8">
+                    <img src="img/book_store/books/book-08.png" alt="cover">
+                    <h4 id="buyBooks-title8">Book</h4>
+                    <p id="buyBooks-author8">Author</p>
+                    <div class="price">
+                        <p>Price: </p>
+                        <p id="buyBooks-bookprice8">9.99 Eur</p>
+                    </div>
+                    <button class="buybook" id="buybook8" type="button">Add to Wishlist</button>
+                </div>
+                <div class="book" id="book9">
+                    <img src="img/book_store/books/book-09.png" alt="cover">
+                    <h4 id="buyBooks-title9">Book</h4>
+                    <p id="buyBooks-author9">Author</p>
+                    <div class="price">
+                        <p>Price: </p>
+                        <p id="buyBooks-bookprice9">9.99 Eur</p>
+                    </div>
+                    <button class="buybook" id="buybook9" type="button">Add to Wishlist</button>
+                </div>
+                <div class="book" id="book10">
+                    <img src="img/book_store/books/book-10.png" alt="cover">
+                    <h4 id="buyBooks-title10">Book</h4>
+                    <p id="buyBooks-author10">Author</p>
+                    <div class="price">
+                        <p>Price: </p>
+                        <p id="buyBooks-bookprice10">9.99 Eur</p>
+                    </div>
+                    <button class="buybook" id="buybook10" type="button">Add to Wishlist</button>
+                </div>
+            </section>
+</section>
+
+            <!-- Favorite books -->
+<section id="favBooks">
+            <section class="search-panel">
+                <h2>Favorite Books</h2>
+            </section>
+            <section class="wishlist">
+                <div class="bookRow">
+                    <img src="img/book_store/books/book-01.png" alt="cover">
+                    <h4 id="favoriteBooks-title1">Book</h4>
+                    <p id="favoriteBooks-author1">Author</p>
+                </div>
+                <div class="bookRow">
+                    <img src="img/book_store/books/book-02.png" alt="cover">
+                    <h4 id="favoriteBooks-title2">Book</h4>
+                    <p id="favoriteBooks-author2">Author</p>
+                </div>
+                <div class="bookRow">
+                    <img src="img/book_store/books/book-01.png" alt="cover">
+                    <h4 id="favoriteBooks-title3">Book</h4>
+                    <p id="favoriteBooks-author3">Author</p>
+                </div>
+                <div class="bookRow">
+                    <img src="img/book_store/books/book-02.png" alt="cover">
+                    <h4 id="favoriteBooks-title4">Book</h4>
+                    <p id="favoriteBooks-author4">Author</p>
+                </div>
+                <div class="bookRow">
+                    <img src="img/book_store/books/book-01.png" alt="cover">
+                    <h4 id="favoriteBooks-title5">Book</h4>
+                    <p id="favoriteBooks-author5">Author</p>
+                </div>
+                <div class="bookRow">
+                    <img src="img/book_store/books/book-02.png" alt="cover">
+                    <h4 id="favoriteBooks-title6">Book</h4>
+                    <p id="favoriteBooks-author6">Author</p>
+                </div>
+            </section>
+</section>
+
+            <!-- Wishlist -->
+            <section id="wishlist">
+            <section class="search-panel">
+                <h2>Wishlist</h2>
+            </section>
+            <section class="wishlist">
+                <div class="bookRow">
+                    <img src="img/book_store/books/book-01.png" alt="cover">
+                    <h4 id="title1">Book</h4>
+                    <p id="author1">Author</p>
+                    <div class="price">
+                        <p>Price: </p>
+                        <p id="bookprice1">9.99 Eur</p>
+                    </div>
+                </div>
+                <div class="bookRow">
+                    <img src="img/book_store/books/book-02.png" alt="cover">
+                    <h4 id="title2">Book</h4>
+                    <p id="author2">Author</p>
+                    <div class="price">
+                        <p>Price: </p>
+                        <p id="bookprice2">9.99 Eur</p>
+                    </div>
+                </div>
+                <div class="bookRow">
+                    <img src="img/book_store/books/book-01.png" alt="cover">
+                    <h4 id="title3">Book</h4>
+                    <p id="author3">Author</p>
+                    <div class="price">
+                        <p>Price: </p>
+                        <p id="bookprice3">9.99 Eur</p>
+                    </div>
+                </div>
+                <div class="bookRow">
+                    <img src="img/book_store/books/book-02.png" alt="cover">
+                    <h4 id="title4">Book</h4>
+                    <p id="author4">Author</p>
+                    <div class="price">
+                        <p>Price: </p>
+                        <p id="bookprice4">9.99 Eur</p>
+                    </div>
+                </div>
+                <div class="bookRow">
+                    <img src="img/book_store/books/book-01.png" alt="cover">
+                    <h4 id="title5">Book</h4>
+                    <p id="author5">Author</p>
+                    <div class="price">
+                        <p>Price: </p>
+                        <p id="bookprice5">9.99 Eur</p>
+                    </div>
+                </div>
+                <div class="bookRow">
+                    <img src="img/book_store/books/book-02.png" alt="cover">
+                    <h4 id="title6">Book</h4>
+                    <p id="author6">Author</p>
+                    <div class="price">
+                        <p>Price: </p>
+                        <p id="bookprice6">9.99 Eur</p>
+                    </div>
+                </div>
+                <div class="totalPrice">
+                    <h1>Total price:</h1>
+                    <p id="totalPrice">99.99 Eur</p>
+                    <button class="buybook" id="checkout" type="button">Ckeckout</button>
+                </div>
+
+            </section>
+            </section>
+
+<section class="login-section" id="loginSection">
         <form method="post" action="index.html">
                 <div class="login">
                     <h1>Online Bookstore</h1>
@@ -149,7 +382,7 @@
             </form>
 </section>
 
-<section class="helpCenter">
+<section class="helpCenter" id="helpCenter">
         <div>
             <h2>Book story user instructions</h2>
             <p>In browse page you can search a book in search field. </p>
@@ -180,7 +413,7 @@
 </section>
 
 
-<section class="SupportCenter">
+<section class="SupportCenter" id="supportCenter">
         <div class="Contacts">
             <h2>Contacts:</h2>
             <p>Support Center email: <br>support@bookstore.com</p>
@@ -205,7 +438,7 @@
     
         </div>
     </section>
-    <section class="settings" >
+    <section class="settings" id="settings">
             <div>
               <h2>Change password:</h2>  
                 <form action="changePassword" method="post" enctype="text/plain">
@@ -244,15 +477,22 @@
             </section>
         </section>
         <section class="footer-right">
+
             <div class="footer-help">
+                <a href="#" onclick="help()">
                 <i class="fa fa-question-circle" aria-hidden="true"></i>
+                </a>
             </div>
+
             <div class="footer-settings">
+                <a href="#" onclick="settings()">
                 <i class="fa fa-cog" aria-hidden="true"></i>
+                </a>
             </div>
         </section>
     </footer>
     <script src="index.js"></script>
+    <script src="nav.js"></script>
 </body>
 
 </html>
