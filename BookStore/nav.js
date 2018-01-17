@@ -8,7 +8,8 @@ var supportCenterSection = document.getElementById("supportCenter");
 var settingsSection = document.getElementById("settings");
 
 shutDown();
-browse();
+//browse();
+login();
 
 function shutDown() {
     buyBooksSection.style.display = "none";
