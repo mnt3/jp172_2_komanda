@@ -176,14 +176,12 @@ input[type=text] {
     -ms-transition: all 0.30s ease-in-out;
     -o-transition: all 0.30s ease-in-out;
     outline: none;
-    padding: 3px 0px 3px 3px;
     margin: 5px 1px 3px 0px;
     border: 1px solid #DDDDDD;
   }
    
 input[type=text]:focus {
     box-shadow: 0 0 5px #7070c2;
-    padding: 3px 0px 3px 3px;
     margin: 5px 1px 3px 0px;
   }
 
@@ -430,7 +428,66 @@ img.img_rating_star
     padding: 10px;
 }
 
-  
+.login-section {
+    text-align: center;
+    padding: 30px;
+}
+
+.login-form {
+    width: 220px;
+    margin: auto;
+}
+
+.input {
+    width: 195px;
+    height: 30px;
+    border-radius: 20px;
+    border: solid 1px #c7cddb;
+    padding-left: 15px;
+    font-size: 18px;
+    margin: 5px;
+}
+
+input[type=password] {
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid #DDDDDD;
+}
+
+input[type=password]:focus {
+    box-shadow: 0 0 5px #7070c2;
+    margin: 5px 1px 3px 0px;
+}
+
+.loginButton {
+    height: 30px;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #97b3ce;
+    border: none;
+    color: white;
+    border-radius: 15px;
+    margin: 5px;
+    float: left;
+}
+
+.loginButton:active {
+    height: 30px;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #2f364a;
+    border: none;
+    color: white;
+    border-radius: 15px;
+    margin: 5px;
+    float: left;
+}
 
 /* Settings style*/
 .settings{

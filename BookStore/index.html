@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-        <script>
-            function main() 
-            {
-                stargen();
-            }
-        </script>
-        <script src="stargen.js"></script>
+    <script>
+        function main() {
+            stargen();
+        }
+    </script>
+    <script src="stargen.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -16,42 +14,42 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="fontas/font-awesome/css/font-awesome.min.css">
 </head>
-
 <body onload="main();">
-    <header>
-        <div class="header-icona">
-            <p>
-                <i class="fa fa-book" aria-hidden="true"></i>Book Store</p>
+<header>
+    <div class="header-icona">
+        <p>
+            <i class="fa fa-book" aria-hidden="true"></i>Book Store</p>
+    </div>
+    <div class="header-right">
+        <div class="help">
+            <a href="#" class="header-help" id="Help" onclick="help()">Help Center</a>
+            <a href="#" class="header-support" id="Support" onclick="support()">Our Support</a>
         </div>
-        <div class="header-right">
-            <div class="help">
-                <a href="#" class="header-help" id="Help" onclick="help()">Help Center</a>
-                <a href="#" class="header-support" id="Support" onclick="support()">Our Support</a>
-            </div>
-            <div class="login">
-                <a href="#" class="header-login" id="Loginform" onclick="login()">Login
-                    <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
-                </a>
-            </div>
+        <div class="login">
+            <a href="#" class="header-login" id="Loginform" onclick="login()">Login
+                <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
+            </a>
         </div>
-    </header>
+    </div>
+</header>
+<section class="vidurys">
+    <nav>
+        <div class="nav">
+            <a href="#" class="nav-button" onclick="browse()">
+                <i class="fa fa-globe" aria-hidden="true"></i> Browse</a>
+            <a href="#" class="nav-button" onclick="buyBooks()">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i> Buy Books</a>
+            <a href="#" class="nav-button" onclick="favoriteBooks()">
+                <i class="fa fa-star" aria-hidden="true"></i> Favourite Books</a>
+            <a href="#" class="nav-button" onclick="wishlist()">
+                <i class="fa fa-th-list" aria-hidden="true"></i> Wishlist</a>
+        </div>
+    </nav>
+    <main>
 
-    <section class="vidurys">
-        <nav>
-            <div class="nav">
-                <a href="#" class="nav-button" onclick="browse()">
-                    <i class="fa fa-globe" aria-hidden="true"></i> Browse</a>
-                <a href="#" class="nav-button" onclick="buyBooks()">
-                    <i class="fa fa-shopping-cart" aria-hidden="true"></i> Buy Books</a>
-                <a href="#" class="nav-button" onclick="favoriteBooks()">
-                    <i class="fa fa-star" aria-hidden="true"></i> Favourite Books</a>
-                <a href="#" class="nav-button" onclick="wishlist()">
-                    <i class="fa fa-th-list" aria-hidden="true"></i> Wishlist</a>
-            </div>
-        </nav>
+        <!-- Browse -->
 
-        <main>
-<section id="browse">
+        <section id="browse">
             <section class="search-panel">
                 <h2>Browse Available Books</h2>
                 <section class="filter">
@@ -70,7 +68,7 @@
                         </div>
                     </section>
                     <section class="search-container">
-                            <span class="fa fa-search"></span>
+                        <span class="fa fa-search"></span>
                         <input id="search-input" type="text" class="form-control input-lg" placeholder="Enter Keywords" tabindex="1">
                     </section>
                 </section>
@@ -127,33 +125,33 @@
                     <p>Author</p>
                 </div>
             </section>
-</section>
-<section id="buyBooks">
-            <!-- Buy books -->
-
-    <section class="search-panel">
-        <h2>Buy Books</h2>
-        <section class="filter">
-            <section class="filter-buttons">
-                <div class="filter-button" id="filter-button-selected">
-                    <p class="filter-button-text">All Books</p>
-                </div>
-                <div class="filter-button">
-                    <p class="filter-button-text">Most Recent</p>
-                </div>
-                <div class="filter-button">
-                    <p class="filter-button-text">Most Popular</p>
-                </div>
-                <div class="filter-button">
-                    <p class="filter-button-text">Free Books</p>
-                </div>
-            </section>
-            <section class="search-container">
-                <span class="fa fa-search"></span>
-                <input id="search-input" type="text" class="form-control input-lg" placeholder="Enter Keywords" tabindex="1">
-            </section>
         </section>
-    </section>
+        <section id="buyBooks">
+            <!-- Buy books -->
+            <section class="search-panel">
+                <h2>Buy Books</h2>
+                <section class="filter">
+                    <section class="filter-buttons">
+                        <div class="filter-button" id="filter-button-selected">
+                            <p class="filter-button-text">All Books</p>
+                        </div>
+                        <div class="filter-button">
+                            <p class="filter-button-text">Most Recent</p>
+                        </div>
+                        <div class="filter-button">
+                            <p class="filter-button-text">Most Popular</p>
+                        </div>
+                        <div class="filter-button">
+                            <p class="filter-button-text">Free Books</p>
+                        </div>
+                    </section>
+                    <section class="search-container">
+                        <span class="fa fa-search"></span>
+                        <input id="search-input" type="text" class="form-control input-lg" placeholder="Enter Keywords"
+                               tabindex="1">
+                    </section>
+                </section>
+            </section>
             <section class="books">
                 <div class="book" id="book1">
                     <img src="img/book_store/books/book-01.png" alt="cover">
@@ -256,10 +254,11 @@
                     <button class="buybook" id="buybook10" type="button">Add to Wishlist</button>
                 </div>
             </section>
-</section>
+        </section>
 
-            <!-- Favorite books -->
-<section id="favBooks">
+        <!-- Favorite books -->
+
+        <section id="favBooks">
             <section class="search-panel">
                 <h2>Favorite Books</h2>
             </section>
@@ -295,10 +294,11 @@
                     <p id="favoriteBooks-author6">Author</p>
                 </div>
             </section>
-</section>
+        </section>
 
-            <!-- Wishlist -->
-            <section id="wishlist">
+        <!-- Wishlist -->
+
+        <section id="wishlist">
             <section class="search-panel">
                 <h2>Wishlist</h2>
             </section>
@@ -363,141 +363,127 @@
                     <button class="buybook" id="checkout" type="button">Ckeckout</button>
                 </div>
             </section>
-            </section>
+        </section>
 
-<section class="login-section" id="loginSection">
-        <form method="post" action="index.html">
-                <div class="login">
-                    <h1>Online Bookstore</h1>
-            
-                    <input type="email" name="email" value="email" onFocus="field_focus(this, 'email');" onblur="field_blur(this, 'email');" class="email" />
-            
-                    <input type="password" name="password" value="password" onFocus="field_focus(this, 'password');" onblur="field_blur(this, 'password');" class="password" />
-            
-                    <a href="#">
-                        <div class="btn">Sign In</div>
-                    </a>
-            
-                    <a href="#">
-                        <div id="btn2">Sign Up</div>
-                    </a>
-            
+        <section class="login-section" id="loginSection">
+                <div class="login-form">
+                    <input type="text" name="email" class="input" placeholder="Login">
+                    <input type="password" name="password" class="input" placeholder="Password">
+                    <button class="loginButton" id="signIn" type="button" onclick="signIn()">Sign In</button>
+                    <button class="loginButton" id="signOut" type="button" onclick="signOut()">Sign Out</button>
                 </div>
-            
-            </form>
-</section>
+        </section>
 
-<section class="helpCenter" id="helpCenter">
-        <div>
-            <h2>Book story user instructions</h2>
-            <p>In browse page you can search a book in search field. </p>
-            <p>If you you want to buy a book, go to Buy books and add to wishlist. </p>
-            <p>In wishlist you can checkout. </p>
-            <p>In favorite book you see 
+        <section class="helpCenter" id="helpCenter">
+            <div>
+                <h2>Book story user instructions</h2>
+                <p>In browse page you can search a book in search field. </p>
+                <p>If you you want to buy a book, go to Buy books and add to wishlist. </p>
+                <p>In wishlist you can checkout. </p>
+                <p>In favorite book you see
                     reviewed books </p>
-        </div>
-        <div class="paiment">
-            <h2>Paiment and delivery</h2>
-            <ul><p><b>Abaut delivery</b></p>
-        <li>We offer guaranteed delivery on certain fast delivery speeds and select. <br> When guaranteed delivery is available on an order, it will be clearly marked on the checkout page with an associated delivery date and fee (if applicable).</li>
-        
-        
-            </ul>
-            
-            <ul> <p><b>About Payment Methods: </b></p>
-            <li>Payment by Credit Card</li>
-            <li>Payment by Direct Debit</li>
-            <li>Payment by Paypal</li>
-            </ul>
-           
-        
-        </div>
-        
-        
-        
-</section>
+            </div>
+            <div class="paiment">
+                <h2>Paiment and delivery</h2>
+                <ul><p><b>Abaut delivery</b></p>
+                    <li>We offer guaranteed delivery on certain fast delivery speeds and select. <br> When guaranteed
+                        delivery is available on an order, it will be clearly marked on the checkout page with an
+                        associated delivery date and fee (if applicable).
+                    </li>
 
 
-<section class="SupportCenter" id="supportCenter">
-        <div class="Contacts">
-            <h2>Contacts:</h2>
-            <p>Support Center email: <br>support@bookstore.com</p>
-            <p>Support Center phone number:<br> +3700000000</p>
-            <p>Support Center address:<br> Vilniaus g. Vilnius Lithuania </p>
-        </div>
-    
-        <div class="support">
-            <h2>Contact us:</h2>
-    
-            <form action="mailto:support@bookstore.com" method="post" enctype="text/plain">
-            Name:<br>
-            <input type="text" name="name"><br>
-            E-mail:<br>
-            <input type="text" name="mail"><br>
-            Comment, question:<br>
-            <textarea id="kom" class="support-comment" name="comment"  cols="30" rows="10"></textarea></p>
-            
-            <input type="submit" value="Send">
-            </form>
-            
-    
-        </div>
-    </section>
-    <section class="settings" id="settings">
+                </ul>
+
+                <ul><p><b>About Payment Methods: </b></p>
+                    <li>Payment by Credit Card</li>
+                    <li>Payment by Direct Debit</li>
+                    <li>Payment by Paypal</li>
+                </ul>
+
+
+            </div>
+
+        </section>
+
+        <section class="SupportCenter" id="supportCenter">
+            <div class="Contacts">
+                <h2>Contacts:</h2>
+                <p>Support Center email: <br>support@bookstore.com</p>
+                <p>Support Center phone number:<br> +3700000000</p>
+                <p>Support Center address:<br> Vilniaus g. Vilnius Lithuania </p>
+            </div>
+
+            <div class="support">
+                <h2>Contact us:</h2>
+
+                <form action="mailto:support@bookstore.com" method="post" enctype="text/plain">
+                    Name:<br>
+                    <input type="text" name="name"><br>
+                    E-mail:<br>
+                    <input type="text" name="mail"><br>
+                    Comment, question:<br>
+                    <textarea id="kom" class="support-comment" name="comment" cols="30" rows="10"></textarea></p>
+
+                    <input type="submit" value="Send">
+                </form>
+
+
+            </div>
+        </section>
+        <section class="settings" id="settings">
             <div>
-              <h2>Change password:</h2>  
+                <h2>Change password:</h2>
                 <form action="changePassword" method="post" enctype="text/plain">
-            <br>
-            <p>Write your new password:</p>
-            <input type="text"  name="password"><br>
-            
-            </form>
+                    <br>
+                    <p>Write your new password:</p>
+                    <input type="text" name="password"><br>
+
+                </form>
             </div>
-            
+
             <div>
-                
-              <h2> Change style color:</h2> 
-               <button class="style-bottom-black" onclick="color1()">black</button>
-               <button class="style-bottom-blue" onclick="color2()">blue</button>
-               <button class="style-bottom-green" onclick="color3()">green</button>
-               
-                
+
+                <h2> Change style color:</h2>
+                <button class="style-bottom-black" onclick="color1()">black</button>
+                <button class="style-bottom-blue" onclick="color2()">blue</button>
+                <button class="style-bottom-green" onclick="color3()">green</button>
+
             </div>
-            
-            
+
+
         </section>
-        </main>
+    </main>
+</section>
+<footer>
+
+    <section class="footer-nav">
+        <section id="footer_buttons" class="footer-buttons">
+            <button id="bl" onclick="push_left()" class="footer-button" type="button">&lt;</button>
+            <button id="b1" onclick="push_1()" class="footer-button" type="button">&nbsp;</button>
+            <button id="b2" onclick="push_2()" class="footer-button" type="button">&nbsp;</button>
+            <button id="b3" onclick="push_3()" class="footer-button" type="button">&nbsp;</button>
+            <button id="b4" onclick="push_4()" class="footer-button" type="button">&nbsp;</button>
+            <button id="b5" onclick="push_5()" class="footer-button" type="button">&nbsp;</button>
+            <button id="br" onclick="push_right()" class="footer-button" type="button">&gt;</button>
+        </section>
     </section>
-    <footer>
+    <section class="footer-right">
 
-        <section class="footer-nav">
-            <section id="footer_buttons" class="footer-buttons">
-                <button id="bl" onclick="push_left()" class="footer-button" type="button">&lt;</button>
-                <button id="b1" onclick="push_1()" class="footer-button" type="button">&nbsp;</button>
-                <button id="b2" onclick="push_2()" class="footer-button" type="button">&nbsp;</button>
-                <button id="b3" onclick="push_3()" class="footer-button" type="button">&nbsp;</button>
-                <button id="b4" onclick="push_4()" class="footer-button" type="button" >&nbsp;</button>
-                <button id="b5" onclick="push_5()" class="footer-button" type="button">&nbsp;</button>
-                <button id="br" onclick="push_right()" class="footer-button" type="button">&gt;</button>
-            </section>
-        </section>
-        <section class="footer-right">
-
-            <div class="footer-help">
-                <a href="#" onclick="help()">
+        <div class="footer-help">
+            <a href="#" onclick="help()">
                 <i class="fa fa-question-circle" aria-hidden="true"></i>
-                </a>
-            </div>
+            </a>
+        </div>
 
-            <div class="footer-settings">
-                <a href="#" onclick="settings()">
+        <div class="footer-settings">
+            <a href="#" onclick="settings()">
                 <i class="fa fa-cog" aria-hidden="true"></i>
-                </a>
-            </div>
-        </section>
-    </footer>
-    <script src="index.js"></script>
-    <script src="nav.js"></script>
+            </a>
+        </div>
+    </section>
+</footer>
+<script src="index.js"></script>
+<script src="nav.js"></script>
 </body>
 
 </html>
