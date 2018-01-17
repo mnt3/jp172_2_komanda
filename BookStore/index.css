@@ -428,6 +428,10 @@ textarea:focus {
     margin: 5px 1px 3px 0px;
 }
 
+.support .button {
+    margin: 0;
+}
+
   /*Help Center styles */
 .helpCenter{
      display: flex;
