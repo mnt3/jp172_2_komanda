@@ -338,15 +338,15 @@ img .img_rating_star
 /* hide unuse sections*/
 
 .login-section{
-  //  display: none;
+    display: none;
 
 }
 .helpCenter{
-  //  display: none;
+    display: none;
 }
 .SupportCenter{
-  //  display: none;
+    display: none;
 }
 .settings{
-  //  display: none;
+    display: none;
 }
