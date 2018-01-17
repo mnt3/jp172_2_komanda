@@ -369,8 +369,8 @@
                 <div class="login-form">
                     <input type="text" name="email" class="input" placeholder="Login">
                     <input type="password" name="password" class="input" placeholder="Password">
-                    <button class="loginButton" id="signIn" type="button" onclick="signIn()">Sign In</button>
-                    <button class="loginButton" id="signOut" type="button" onclick="signOut()">Sign Out</button>
+                    <button class="button" id="signIn" type="button" onclick="signIn()">Sign In</button>
+                    <button class="button" id="signOut" type="button" onclick="signOut()">Sign Out</button>
                 </div>
         </section>
 
@@ -406,6 +406,7 @@
         </section>
 
         <section class="SupportCenter" id="supportCenter">
+
             <div class="Contacts">
                 <h2>Contacts:</h2>
                 <p>Support Center email: <br>support@bookstore.com</p>
@@ -415,20 +416,15 @@
 
             <div class="support">
                 <h2>Contact us:</h2>
-
                 <form action="mailto:support@bookstore.com" method="post" enctype="text/plain">
-                    Name:<br>
-                    <input type="text" name="name"><br>
-                    E-mail:<br>
-                    <input type="text" name="mail"><br>
-                    Comment, question:<br>
-                    <textarea id="kom" class="support-comment" name="comment" cols="30" rows="10"></textarea></p>
-
-                    <input type="submit" value="Send">
+                    <input type="text" name="name" class="input" placeholder="Name">
+                    <input type="text" name="mail" class="input" placeholder="E-mail">
+                    <textarea id="kom" name="comment" cols="30" rows="10" placeholder="Comment, question"></textarea></p>
+                    <input type="submit" value="Send" class="button">
                 </form>
 
-
             </div>
+
         </section>
         <section class="settings" id="settings">
             <div>
