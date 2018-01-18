@@ -89,7 +89,7 @@ var ikelimoel2="book"+iii+"";
 var ikeltiIDIV2 = document.getElementById(ikelimoel2);
 
 
-   ikeltiIDIV2.innerHTML="<div class=\"book\"> <img src="+knyga.imgSrc+" alt=\"cover\"> <h4>"+knyga.name+"</h4> <p>"+knyga.author+"</p> <p>"+knyga.rating+"</p> <div class=\"price\"> <p>Price: </p><p id=\"buyBooks-bookprice"+iii+"\">"+knyga.price+" Eur</p> </div> <button class=\"buybook\" id=\"buybook"+iii+"\" type=\"button\">Add to Wishlist</button> </div>"; 
+   ikeltiIDIV2.innerHTML="<div class=\"book\" id="+ikelimoel2+"> <img src="+knyga.imgSrc+" alt=\"cover\"> <h4>"+knyga.name+"</h4> <p>"+knyga.author+"</p> <p>"+knyga.rating+"</p> <div class=\"price\"> <p>Price: </p><p id=\"buyBooks-bookprice"+iii+"\">"+knyga.price+" Eur</p> </div> <button class=\"buybook\" id=\"buybook"+iii+"\" type=\"button\">Add to Wishlist</button> </div>"; 
    
 iii++;
 }
@@ -105,18 +105,46 @@ sukurtiBuy(knyga1);
 sukurtiBuy(knyga2);
 
 
-/* funkcija atvaizdavimui wish listui*/
+/* funkcija atvaizdavimui favorite listui*/
 
 var iiii=1;
-function sukurtiWishlist(knyga){
+function sukurtiFavoriteBook(knyga){
 
-var ikelimoel3="wishbook"+iiii+"";
+var ikelimoel3="favbook"+iiii+"";
 
 var ikeltiIDIV3 = document.getElementById(ikelimoel3);
     
-ikeltiIDIV3.innerHTML="<div class=\"bookRow\"> <img src="+knyga.imgSrc+" alt=\"cover\"> <h4  id=\"favoriteBooks-title"+iiii+"\">"+knyga.name+"</h4> <p favoriteBooks-author"+iiii+">"+knyga.author+"</p>  </div>";
+ikeltiIDIV3.innerHTML="<div class=\"bookRow\" id="+ikelimoel3+"> <img src="+knyga.imgSrc+" alt=\"cover\"> <h4  id=\"favoriteBooks-title"+iiii+"\">"+knyga.name+"</h4> <p favoriteBooks-author"+iiii+">"+knyga.author+"</p>  </div>";
 
 iiii++;
+}
+sukurtiFavoriteBook(knyga1);
+sukurtiFavoriteBook(knyga1);
+sukurtiFavoriteBook(knyga2);
+sukurtiFavoriteBook(knyga1);
+sukurtiFavoriteBook(knyga1);
+sukurtiFavoriteBook(knyga2);
+sukurtiFavoriteBook(knyga1);
+sukurtiFavoriteBook(knyga1);
+sukurtiFavoriteBook(knyga2);
+sukurtiFavoriteBook(knyga1);
+
+
+
+/* funkcija atvaizdavimui wishlistui listui*/
+
+var iiiii=1;
+function sukurtiWishlist(knyga){
+
+var ikelimoel3="wishbook"+iiiii+"";
+
+var ikeltiIDIV3 = document.getElementById(ikelimoel3);
+    
+ikeltiIDIV3.innerHTML="<div class=\"bookRow\" id="+ikelimoel3+"> <img src="+knyga.imgSrc+" alt=\"cover\"> <h4  id=\"favoriteBooks-title"+iiiii+"\">"+knyga.name+"</h4> <p favoriteBooks-author"+iiiii+">"+knyga.author+"</p> <div class=\"price\"> <p>Price: </p><p id=\"buyBooks-bookprice"+iiiii+"\">"+knyga.price+" Eur</p> </div> </div>";
+    
+  
+
+iiiii++;
 }
 sukurtiWishlist(knyga1);
 sukurtiWishlist(knyga1);
