@@ -1,11 +1,16 @@
-var browseSection = document.getElementById("browse");
-var buyBooksSection = document.getElementById("buyBooks");
-var favBooksSection = document.getElementById("favBooks");
-var wishlistSection = document.getElementById("wishlist");
-var loginSection = document.getElementById("loginSection");
-var helpCenterSection = document.getElementById("helpCenter");
-var supportCenterSection = document.getElementById("supportCenter");
-var settingsSection = document.getElementById("settings");
+var browseSection = document.getElementById("browse"),
+    buyBooksSection = document.getElementById("buyBooks"),
+    favBooksSection = document.getElementById("favBooks"),
+    wishlistSection = document.getElementById("wishlist"),
+    loginSection = document.getElementById("loginSection"),
+    helpCenterSection = document.getElementById("helpCenter"),
+    supportCenterSection = document.getElementById("supportCenter"),
+    settingsSection = document.getElementById("settings"),
+    
+    nav_browse = document.getElementById("nav_browse"),
+    nav_buybooks = document.getElementById("nav_buybooks"),
+    nav_favoriteBooks = document.getElementById("nav_favoriteBooks"),
+    nav_wishlist = document.getElementById("nav_wishlist");
 
 shutDown();
 //browse();
@@ -54,10 +59,23 @@ function support() {
 
 function login() {
     shutDown();
+    nav_logedout();
     loginSection.style.display = "block";
 }
 
 function settings() {
     shutDown();
     settingsSection.style.display = "block";
+}
+
+function nav_logedout () {    
+    nav_buybooks.style.display = "none";
+    nav_favoriteBooks.style.display = "none";
+    nav_wishlist.style.display = "none";
+}
+
+function nav_logedin () {    
+    nav_buybooks.style.display = "block";
+    nav_favoriteBooks.style.display = "block";
+    nav_wishlist.style.display = "block";
 }

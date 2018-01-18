@@ -37,13 +37,13 @@
 <section class="vidurys">
     <nav>
         <div class="nav">
-            <a href="#" class="nav-button" onclick="browse()">
+            <a href="#" class="nav-button" id="nav_browse" onclick="browse()">
                 <i class="fa fa-globe" aria-hidden="true"></i> Browse</a>
-            <a href="#" class="nav-button" onclick="buyBooks()">
+            <a href="#" class="nav-button" id="nav_buybooks" onclick="buyBooks()">
                 <i class="fa fa-shopping-cart" aria-hidden="true"></i> Buy Books</a>
-            <a href="#" class="nav-button" onclick="favoriteBooks()">
+            <a href="#" class="nav-button" id="nav_favoriteBooks" onclick="favoriteBooks()">
                 <i class="fa fa-star" aria-hidden="true"></i> Favourite Books</a>
-            <a href="#" class="nav-button" onclick="wishlist()">
+            <a href="#" class="nav-button" id="nav_wishlist" onclick="wishlist()">
                 <i class="fa fa-th-list" aria-hidden="true"></i> Wishlist</a>
         </div>
     </nav>
@@ -351,7 +351,7 @@
                     </div>
                 </div>
                 <div class="bookRow">
-                    <img src="img/book_store/books/book-02.p_ng" alt="cover">
+                    <img src="img/book_store/books/book-02.png" alt="cover">
                     <h4 id="title6">Book</h4>
                     <p id="author6">Author</p>
                     <div class="price">
@@ -368,10 +368,10 @@
         </section>
         <section class="login-section" id="loginSection">
                 <div class="login-form">
-                    <input type="text" name="email" class="input" placeholder="Login">
-                    <input type="password" name="password" class="input" placeholder="Password">
-                    <button class="button" id="signIn" type="button" onclick="signIn()">Sign In</button>
-                    <button class="button" id="signOut" type="button" onclick="signOut()">Sign Out</button>
+                    <input type="text" name="email" class="input" id="cl_formemail" placeholder="Login">
+                    <input type="password" name="password" class="input" id="cl_formpswd" placeholder="Password">
+                    <button class="button" id="signIn" type="button" onclick="cl_weakauth_singin();">Sign In</button>
+                    <button class="button" id="signOut" type="button" onclick="cl_weakauth_singup();">Sign Out</button>
                 </div>
         </section>        <section class="helpCenter" id="helpCenter">
             <div>
