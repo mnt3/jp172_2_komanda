@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="fontawesome/web-fonts-with-css/css/fontawesome-all.css">
     <link rel="stylesheet" href="login.css">
-    <script type="text/javascript" src="login.js"></script>
+    <script type="text/javascript" src="../cl_weakauth.js"></script>
 
 </head>
 
@@ -16,11 +16,11 @@
     <div class="login">
         <h1>Online Bookstore</h1>
 
-        <input type="email" name="email" value="email" onFocus="field_focus(this, 'email');" onblur="field_blur(this, 'email');" class="email" />
+        <input type="email" name="email" value="email" onFocus="this.value = '';" class="email" />
 
-        <input type="password" name="password" value="password" onFocus="field_focus(this, 'password');" onblur="field_blur(this, 'password');" class="password" />
+        <input type="password" name="password" value="password" onFocus="this.value = '';" class="password" />
 
-        <a href="#">
+        <a href="#cl_weakauth_singin" onclick="cl_weakauth_singin();">
             <div class="btn">Sign In</div>
         </a>
 
