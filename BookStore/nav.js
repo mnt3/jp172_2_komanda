@@ -15,6 +15,7 @@ var browseSection = document.getElementById("browse"),
 shutDown();
 //browse();
 login();
+cl_weakauth_singin(cl_weakauth_cookieman_get("catus_users"), cl_weakauth_cookieman_get("cokb_locked"));
 
 function shutDown() {
     buyBooksSection.style.display = "none";

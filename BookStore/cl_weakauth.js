@@ -69,6 +69,8 @@ function cl_weakauth_singin(nick= document.getElementById("cl_formemail").value,
         document.getElementsByClassName("login")[0].innerHTML = "<a href=\"#\" class=\"header-login\" id=\"Loginform\"> " + nick + " </a> <i class=\"fa fa-chevron-circle-down\" aria-hidden=\"true\"></i>";
         browse();
         nav_logedin();
+        cl_weakauth_cookieman_set("catus_users", nick);
+        cl_weakauth_cookieman_set("cokb_locked", pswd);
         return true;
     }
     
