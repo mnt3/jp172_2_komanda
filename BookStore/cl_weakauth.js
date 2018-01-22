@@ -6,7 +6,7 @@
 +------------------------------------------------------------------*/
 
 var auth_nick = [ "aven", "mykl", "andr", "tommy", "0" ],
-auth_pswd = [ "pizza", "jelly", "peanut", "porkchop", "0" ]; 
+    auth_pswd = [ "pizza", "jelly", "peanut", "porkchop", "0" ];
 
 function cl_weakauth_checks(nick= "0", pswd= "0") {
     var checks = [];
@@ -14,24 +14,24 @@ function cl_weakauth_checks(nick= "0", pswd= "0") {
     {
         if (auth_nick[i] == nick) 
         {
-            console.log("nick Succ.");
+            //console.log("nick Succ.");
             checks.push("nick_true"); 
             
             if(auth_pswd[i] == pswd) 
             {
-                console.log("pswd Succ.");
+                //console.log("pswd Succ.");
                 checks.push("pswd_true");
                 break;
             }
             else 
             {
-                console.log("pswd Fail.");
+                //console.log("pswd Fail.");
                 checks.push("pswd_false");                
             }
         }
         else
         {
-            console.log("nick Fail.");
+            //console.log("nick Fail.");
             checks.push("nick_false"); 
         }
     }
@@ -63,7 +63,7 @@ function cl_weakauth_singup(nick= "0", pswd= "0", email= "0", gend= "0") {
 
 function cl_weakauth_singin(nick= document.getElementById("cl_formemail").value, pswd= document.getElementById("cl_formpswd").value) {
     var check = cl_weakauth_checks(nick, pswd);
-    console.log("check_nick: " + check[0] + " check_pswd: " + check[1]);
+    //console.log("check_nick: " + check[0] + " check_pswd: " + check[1]);
     if(check[0] && check[1]) 
     {
         document.getElementsByClassName("login")[0].innerHTML = "<a href=\"#\" class=\"header-login\" id=\"Loginform\"> " + nick + " </a> <i class=\"fa fa-chevron-circle-down\" aria-hidden=\"true\"></i>";
@@ -73,4 +73,16 @@ function cl_weakauth_singin(nick= document.getElementById("cl_formemail").value,
     }
     
     return false;
+}
+
+function cl_weakauth_cookieman_get(cookie_name= "") {
+
+}
+
+function cl_weakauth_cookieman_set(cookie_name= "", cookie_val = "") {
+    document.cookie = cookie_name + "=" + cookie_val + "; expires=Thu, 01 Jan 2300 00:00:00 UTC; path=/;"
+}
+
+function cl_weakauth_cookieman_del(cookie_name= "") {
+    document.cookie = cookie_name + "=" + "; expires=Thu, 01 Jan 1300 00:00:00 UTC; path=/;"    
 }
