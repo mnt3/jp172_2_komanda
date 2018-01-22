@@ -76,13 +76,24 @@ function cl_weakauth_singin(nick= document.getElementById("cl_formemail").value,
 }
 
 function cl_weakauth_cookieman_get(cookie_name= "") {
-
+    var cookies = document.cookie.split("; ");
+    
+    for (i = 0; i < cookies.length; i++)
+    {
+        if(cookies[i].indexOf(cookie_name) > -1)
+        {
+            cookies = cookies[i].split("=");
+            return cookies[1];
+        }
+    }
+    
+    return false;
 }
 
 function cl_weakauth_cookieman_set(cookie_name= "", cookie_val = "") {
-    document.cookie = cookie_name + "=" + cookie_val + "; expires=Thu, 01 Jan 2300 00:00:00 UTC; path=/;"
+    document.cookie = cookie_name + "=" + cookie_val + "; expires=Thu, 01 Jan 2300 00:00:00 UTC; path=/;";
 }
 
 function cl_weakauth_cookieman_del(cookie_name= "") {
-    document.cookie = cookie_name + "=" + "; expires=Thu, 01 Jan 1300 00:00:00 UTC; path=/;"    
+    document.cookie = cookie_name + "=" + "; expires=Thu, 01 Jan 1300 00:00:00 UTC; path=/;";
 }
