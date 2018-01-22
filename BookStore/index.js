@@ -14,6 +14,14 @@ function knyga(name = "book", author ="noname", price=0 , imgSrc="img-default.jp
 
 var knyga1 = new knyga("knyga","autorius",10,"img/book_store/books/book-01.png",5.0,1);
 var knyga2 = new knyga("knyga2","autorius2",5,"img/book_store/books/book-02.png",3.0,2);
+var knyga3 = new knyga("knyga3","autorius3",15,"img/book_store/books/book-03.png",2.0,3);
+var knyga4 = new knyga("knyga4","autorius2",5,"img/book_store/books/book-04.png",4.0,4);
+var knyga5 = new knyga("knyga5","autorius",20,"img/book_store/books/book-05.png",5.0,5);
+var knyga6 = new knyga("knyga6","autorius2",7,"img/book_store/books/book-06.png",2.0,6);
+var knyga7 = new knyga("knyga7","autorius4",10,"img/book_store/books/book-07.png",2.5,7);
+var knyga8 = new knyga("knyga8","autorius2",8,"img/book_store/books/book-08.png",3.5,8);
+var knyga9 = new knyga("knyga9","autorius6",30,"img/book_store/books/book-09.png",5.0,9);
+var knyga10 = new knyga("knyga10","autorius3",1,"img/book_store/books/book-10.png",1.5,10);
 
 
 //bandymas ideti knyga i div
@@ -90,7 +98,7 @@ var ikelimoel2="book"+iii+"";
 var ikeltiIDIV2 = document.getElementById(ikelimoel2);
 
 
-   ikeltiIDIV2.innerHTML="<div class=\"book\" id="+ikelimoel2+"> <img src="+knyga.imgSrc+" alt=\"cover\"> <h4>"+knyga.name+"</h4> <p>"+knyga.author+"</p> <p>"+knyga.rating+"</p> <div class=\"price\"> <p>Price: </p><p id=\"buyBooks-bookprice"+iii+"\">"+knyga.price+" Eur</p> </div> <button class=\"buybook\" id=\"buybook"+iii+"\" type=\"button\">Add to Wishlist</button> </div>"; 
+   ikeltiIDIV2.innerHTML="<div class=\"book\" id="+ikelimoel2+"> <img src="+knyga.imgSrc+" alt=\"cover\"> <h4>"+knyga.name+"</h4> <p>"+knyga.author+"</p> <p>"+knyga.rating+"</p> <div class=\"price\"> <p>Price: </p><p id=\"buyBooks-bookprice"+iii+"\">"+knyga.price+" Eur</p> </div> <button class=\"buybook\" id=\"buybook"+iii+"\" onclick=\"wishbuttonpush("+iii+")\">Add to Wishlist</button> </div>"; 
    
 iii++;
 }
@@ -147,15 +155,9 @@ ikeltiIDIV3.innerHTML=" <img src="+knyga.imgSrc+" alt=\"cover\"> <h4  id=\"favor
 
 iiiii++;
 }
-sukurtiWishlist(knyga1);
-sukurtiWishlist(knyga1);
+
 sukurtiWishlist(knyga2);
-sukurtiWishlist(knyga1);
-sukurtiWishlist(knyga1);
-sukurtiWishlist(knyga2);
-sukurtiWishlist(knyga1);
-sukurtiWishlist(knyga1);
-sukurtiWishlist(knyga2);
+
 
 
 
