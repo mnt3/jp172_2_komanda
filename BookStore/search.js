@@ -2,62 +2,88 @@ var searchString;
 
 var knyguklases = document.getElementsByClassName('book');
 
-function search(e) {
+function search(e, id) {
+    iii = 1;
+    i = 1;
+
     if(e.keyCode === 13) {
-        searchString = document.getElementById('browse-search-input').value;
+        searchString = document.getElementById(id).value;
         if (searchString.length >= 3) {
         hideBook();
             for (var index = 0; index < bookArray.length; index++)
                 if (bookArray[index].name.indexOf(searchString) !== -1 || bookArray[index].author.indexOf(searchString) !== -1) {
-                    sukurtiDiv(bookArray[index]);
+                    if (id === 'buy-search-input') {
+                        sukurtiBuy(bookArray[index]);
+                    }
+                    else {sukurtiDiv(bookArray[index]);}
                 }
                 stargen(5, "starcreate");
         }
     }
 }
 
-function allBooks() {
+function allBooks(id) {
+    i = 1;
+    iii = 1;
     inactiveButtons();
-    var e = document.getElementById('allBooks');
+    var e = document.getElementById(id);
     activeButton(e);
     hideBook();
     for (var index = 0; index < bookArray.length; index++)
-        sukurtiDiv(bookArray[index]);
+        if (id === 'buyAllBooks') {
+            sukurtiBuy(bookArray[index]);
+        }
+        else {sukurtiDiv(bookArray[index]);}
         stargen(5, "starcreate");
 }
 
-function recentBooks() {
+function recentBooks(id) {
+    i = 1;
+    iii = 1;
     inactiveButtons();
-    var e = document.getElementById('recentBooks');
+    var e = document.getElementById(id);
     activeButton(e);
     hideBook();
 
     for (var index = bookArray.length-1; index > bookArray.length - 11; index--)
-        sukurtiDiv(bookArray[index]);
+        if (id === 'buyRecentBooks') {
+            sukurtiBuy(bookArray[index]);
+        }
+        else {sukurtiDiv(bookArray[index]);}
         stargen(5, "starcreate");
 }
 
-function popularBooks() {
+function popularBooks(id) {
+    i = 1;
+    iii = 1;
     inactiveButtons();
-    var e = document.getElementById('popularBooks');
+    var e = document.getElementById(id);
     activeButton(e);
     hideBook();
 
     for (var index = 0; index < bookArray.length; index++)
         if (bookArray[index].rating >= 4) {
-            sukurtiDiv(bookArray[index]);
+        if (id === 'buyPopularBooks') {
+            sukurtiBuy(bookArray[index]);
+        }
+            else{sukurtiDiv(bookArray[index]);}
         }
     stargen(5, "starcreate");
 }
 
-function freeBooks() {
+function freeBooks(id) {
+    i = 1;
+    iii = 1;
     inactiveButtons();
-    var e = document.getElementById('freeBooks');
+    var e = document.getElementById(id);
     activeButton(e);
     hideBook();
     for (var index = 0; index < bookArray.length; index++)
     if (bookArray[index].price === 0) {
-        sukurtiDiv(bookArray[index]);
+        if (id === 'buyFreeBooks') {
+            sukurtiBuy(bookArray[index]);
+        }
+        else {sukurtiDiv(bookArray[index]);}
     }
     stargen(5, "starcreate");
 }
