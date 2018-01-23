@@ -56,22 +56,22 @@
                 <h2>Browse Available Books</h2>
                 <section class="filter">
                     <section class="filter-buttons">
-                        <div class="filter-button" id="filter-button-selected">
+                        <div class="filter-button" id="allBooks" onclick="allBooks()">
                             <p class="filter-button-text">All Books</p>
                         </div>
-                        <div class="filter-button">
+                        <div class="filter-button" id="recentBooks" onclick="recentBooks()">
                             <p class="filter-button-text">Most Recent</p>
                         </div>
-                        <div class="filter-button">
+                        <div class="filter-button" id="popularBooks" onclick="popularBooks()">
                             <p class="filter-button-text">Most Popular</p>
                         </div>
-                        <div class="filter-button">
+                        <div class="filter-button" id="freeBooks" onclick="freeBooks()">
                             <p class="filter-button-text">Free Books</p>
                         </div>
                     </section>
                     <section class="search-container">
                         <span class="fa fa-search"></span>
-                        <input id="browse-search-input" type="text" class="form-control input-lg" placeholder="Enter Keywords" tabindex="1" onkeypress="search()">
+                        <input id="browse-search-input" type="text" class="form-control input-lg" placeholder="Enter Keywords" tabindex="1" onkeypress="return search(event)">
                     </section>
                 </section>
             </section>
