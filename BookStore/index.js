@@ -50,6 +50,7 @@ function sukurtiDiv (knyga){
 var ikelimoel="brBook"+i+"";
 
 var ikeltiIDIV = document.getElementById(ikelimoel);
+    ikeltiIDIV.style.display = 'block';
 
 ikeltiIDIV.innerHTML="<div class=\"book\"> <img src="+knyga.imgSrc+" alt=\"cover\"> <h4>"+knyga.name+"</h4> <p>"+knyga.author+"</p> <p class=\"starcreate\">"+knyga.rating+"</p>  </div>";
 i++;
