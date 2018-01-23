@@ -161,6 +161,16 @@ header {
     margin-top: -10px;
 }
 
+#buy-search-input {
+    width: 400px;
+    height: 30px;
+    border-radius: 20px;
+    border: solid 1px #c7cddb;
+    padding-left: 15px;
+    font-size: 18px;
+    margin-top: -10px;
+}
+
 .fa-search {
     color: #8c97b2;
     float: right;
