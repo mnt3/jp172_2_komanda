@@ -124,17 +124,25 @@ var iiiii = 1;
 function sukurtiWishlist(knyga) {
     var div = document.createElement("div");
     div.className = "bookRow";
+    div.id = "wshboon"+knyga.id;
     document.getElementById("wishlistbooks").appendChild(div);
 
     var ikelimoel3 = "wishbook" + iiiii + "";
 
     var ikeltiIDIV3 = document.getElementById(ikelimoel3);
 
-    div.innerHTML = " <img src=" + knyga.imgSrc + " alt=\"cover\"> <h4  id=\"favoriteBooks-title" + iiiii + "\">" + knyga.name + "</h4> <p favoriteBooks-author" + iiiii + ">" + knyga.author + "</p> <div class=\"price\"> <p>Price: </p><p id=\"buyBooks-bookprice" + iiiii + "\">" + knyga.price + " Eur</p> </div> ";
+    div.innerHTML = " <img src=" + knyga.imgSrc + " alt=\"cover\"> <h4  id=\"favoriteBooks-title" + iiiii + "\">" + knyga.name + "</h4> <p favoriteBooks-author" + iiiii + ">" + knyga.author + "</p> <div class=\"price\"> <button class=\"buybook\" onclick=\"deteleBook("+knyga.id+")\" >Delete this book</button><p>Price: </p><p id=\"buyBooks-bookprice" + iiiii + "\">" + knyga.price + " Eur</p> </div> ";
 
 
 
     iiiii++;
+}
+
+function deteleBook(deleteBok){
+    var vardas2 ="wshboon"+deleteBok;
+   // document.getElementById(vardas2).innerHTML="";
+    document.getElementById(vardas2).remove();
+    minusCalculator(deleteBok);
 }
 
 

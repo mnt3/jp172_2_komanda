@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="fontas/font-awesome/css/font-awesome.min.css">
 </head>
 <body onload="main();">
-<header>
+<header id="header">
     <div class="header-icona">
         <p>
             <i class="fa fa-book" aria-hidden="true"></i>Book Store</p>
@@ -36,7 +36,7 @@
 </header>
 <section class="vidurys">
     <nav>
-        <div class="nav">
+        <div class="nav" id="navi">
             <a href="#" class="nav-button" id="nav_browse" onclick="browse()">
                 <i class="fa fa-globe" aria-hidden="true"></i> Browse</a>
             <a href="#" class="nav-button" id="nav_buybooks" onclick="buyBooks()">
@@ -284,9 +284,9 @@
             <div>
 
                 <h2> Change style color:</h2>
-                <button class="style-bottom-black" onclick="color1()">black</button>
-                <button class="style-bottom-blue" onclick="color2()">blue</button>
-                <button class="style-bottom-green" onclick="color3()">green</button>
+                <button class="style-bottom-black" onclick="color('#000')">black</button>
+                <button class="style-bottom-blue" onclick="color('#00f')">blue</button>
+                <button class="style-bottom-green" onclick="color('#0f0')">green</button>
 
             </div>
 
@@ -294,7 +294,7 @@
         </section>
     </main>
 </section>
-<footer>
+<footer id="footer">
 
     <section class="footer-nav">
         <section id="footer_buttons" class="footer-buttons">
@@ -327,6 +327,18 @@
 <script src="search.js"></script>
 <script src="nav.js"></script>
 <script src="wishlistButton.js"></script>
+<script type="text/javascript">
+	function color(color){
+		var header = document.querySelector('[id="header"]');
+		var navi = document.querySelector('[id="navi"]');
+		var footer = document.querySelector('[id="footer"]');
+
+		header.style.backgroundColor=color;
+		navi.style.backgroundColor=color;
+		footer.style.backgroundColor=color;
+
+	}
+</script>
 
 
 </body>

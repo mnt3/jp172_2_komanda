@@ -20,6 +20,10 @@ function sumCalculate(knygas){
   sum=sum+Number(knygas.price);
   sumVieta.innerHTML="<p>Eur</p><p>"+sum+"</p>";
 }
+function minusCalculator(bookID){
+    sum=sum-Number(masyvas[bookID-1].price);
+    sumVieta.innerHTML="<p>Eur</p><p>"+sum+"</p>";
+}
 sumVieta.innerHTML="<p>Eur</p><p>"+sum+"</p>";
 
 function  favbuttonpush(paspBusena){
