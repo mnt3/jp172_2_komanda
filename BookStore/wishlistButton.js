@@ -31,18 +31,36 @@ function  favbuttonpush(paspBusena){
   sukurtiFavoriteBook(masyvas[paspBusena-1]);
 }
 
-/*
+function checkoutFunction(){
+    location.reload();
+    
+    // reiks kazkokios pirkimo formos
+}
+//funkcija kuri favourite books isfiltruoja veikia, bet kartais nuluzta perdaug klikinant
+// kolkas netrinti, gal veliau pravers, ziurint ka Mykolas pasiulys
+/* 
 function  favbuttonpush(paspBusena){
-  var vardas = "knyga"+paspBusena;
+ // var vardas = ""+paspBusena;
  //  resultfilterbooks = masyvasFavbook.filter(word => word.name!=vardas);
  // filterFavbooks(vardas,paspBusena);
-  masyvasFavbook.push(vardas);
+   for (i =1 ; i <= masyvasFavbook.length; i++) { 
+    detelefvBook(i);
+} 
+  masyvasFavbook.push(paspBusena);
   masyvasFavbook=filtrerArrayFavourite(masyvasFavbook);
 
   for (i = 0; i < masyvasFavbook.length; i++) { 
-    sukurtiFavoriteBook(masyvas[masyvasFavbook.id]);
+    sukurtiFavoriteBook(masyvas[masyvasFavbook[i]-1]);
 }
-
+ function detelefvBook(deleteBok){
+    var vardas2 ="fvboon"+deleteBok;
+   // document.getElementById(vardas2).innerHTML="";
+    document.getElementById(vardas2).remove();
+    
+}
+   
+    
+    
 }
 function filtrerArrayFavourite(elementt){
   let Newarray = elementt.filter(function(elem, index, self) {

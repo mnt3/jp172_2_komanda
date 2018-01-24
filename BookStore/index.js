@@ -107,6 +107,7 @@ var iiii = 1;
 function sukurtiFavoriteBook(knyga) {
     var div = document.createElement("div");
     div.className = "bookRow";
+    div.id = "fvboon"+knyga.id;
     document.getElementById("fvbooks").appendChild(div);
     var ikelimoel3 = "favbook" + iiii + "";
     var ikeltiIDIV3 = document.getElementById(ikelimoel3);
