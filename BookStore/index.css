@@ -311,7 +311,9 @@ input[type=text]:focus {
     padding-right: 20px;
     float: right;
 }
-
+.bookRow .buybook{
+    margin-top: 20px;
+}
 
 .totalPrice {
     margin: 20px;
