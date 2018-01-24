@@ -1,0 +1,11 @@
+var bookArray = [];
+bookArray.push(knyga1);
+bookArray.push(knyga2);
+bookArray.push(knyga3);
+bookArray.push(knyga4);
+bookArray.push(knyga5);
+bookArray.push(knyga6);
+bookArray.push(knyga7);
+bookArray.push(knyga8);
+bookArray.push(knyga9);
+bookArray.push(knyga10);

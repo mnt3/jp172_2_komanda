@@ -56,22 +56,22 @@
                 <h2>Browse Available Books</h2>
                 <section class="filter">
                     <section class="filter-buttons">
-                        <div class="filter-button" id="filter-button-selected">
+                        <div class="filter-button" id="allBooks" onclick="allBooks(id)">
                             <p class="filter-button-text">All Books</p>
                         </div>
-                        <div class="filter-button">
+                        <div class="filter-button" id="recentBooks" onclick="recentBooks(id)">
                             <p class="filter-button-text">Most Recent</p>
                         </div>
-                        <div class="filter-button">
+                        <div class="filter-button" id="popularBooks" onclick="popularBooks(id)">
                             <p class="filter-button-text">Most Popular</p>
                         </div>
-                        <div class="filter-button">
+                        <div class="filter-button" id="freeBooks" onclick="freeBooks(id)">
                             <p class="filter-button-text">Free Books</p>
                         </div>
                     </section>
                     <section class="search-container">
                         <span class="fa fa-search"></span>
-                        <input id="search-input" type="text" class="form-control input-lg" placeholder="Enter Keywords" tabindex="1">
+                        <input id="browse-search-input" type="text" class="form-control input-lg" placeholder="Enter Keywords" tabindex="1" onkeypress="return search(event, id)">
                     </section>
                 </section>
             </section>
@@ -240,23 +240,23 @@
                 <h2>Buy Books</h2>
                 <section class="filter">
                     <section class="filter-buttons">
-                        <div class="filter-button" id="filter-button-selected">
+                        <div class="filter-button" id="buyAllBooks" onclick="allBooks(id)">
                             <p class="filter-button-text">All Books</p>
                         </div>
-                        <div class="filter-button">
+                        <div class="filter-button" id="buyRecentBooks" onclick="recentBooks(id)">
                             <p class="filter-button-text">Most Recent</p>
                         </div>
-                        <div class="filter-button">
+                        <div class="filter-button" id="buyPopularBooks" onclick="popularBooks(id)">
                             <p class="filter-button-text">Most Popular</p>
                         </div>
-                        <div class="filter-button">
+                        <div class="filter-button" id="buyFreeBooks" onclick="freeBooks(id)">
                             <p class="filter-button-text">Free Books</p>
                         </div>
                     </section>
                     <section class="search-container">
                         <span class="fa fa-search"></span>
-                        <input id="search-input" type="text" class="form-control input-lg" placeholder="Enter Keywords"
-                               tabindex="1">
+                        <input id="buy-search-input" type="text" class="form-control input-lg" placeholder="Enter Keywords"
+                               tabindex="1" onkeypress="return search(event, id)">
                     </section>
                 </section>
             </section>
@@ -299,40 +299,8 @@
             <section class="search-panel">
                 <h2>Favorite Books</h2>
             </section>
-            <section class="wishlist">
-                <div class="bookRow" id="favbook1">
-                    
-                </div>
-                <div class="bookRow" id="favbook2">
-                    
-                </div>
-                <div class="bookRow" id="favbook3">
-                    
-                </div>
-                <div class="bookRow" id="favbook4">
-                    
-                </div>
-                <div class="bookRow" id="favbook5">
-                    
-                </div>
-                <div class="bookRow" id="favbook6">
-                    
-                </div>
-                <div class="bookRow" id="favbook7">
-                    
-                </div>
-                <div class="bookRow" id="favbook8">
-                    
-                </div>
-                <div class="bookRow" id="favbook9">
-                    
-                </div>
-                <div class="bookRow" id="favbook10">
-                    </div>
-                    <div class="bookRow" id="favbook9">
-                        
-                    </div>
-                    <div class="bookRow" id="favbook10">
+            <section class="wishlist" id="fvbooks">
+               
                     
                 </div>
             </section>
@@ -344,35 +312,8 @@
             <section class="search-panel">
                 <h2>Wishlist</h2>
             </section>
-            <section class="wishlist">
-               <div class="bookRow" id="wishbook1">
-                    
-                </div>
-                <div class="bookRow" id="wishbook2">
-                    
-                </div>
-                <div class="bookRow" id="wishbook3">
-                    
-                </div>
-                <div class="bookRow" id="wishbook4">
-                    
-                </div>
-                <div class="bookRow" id="wishbook5">
-                    
-                </div>
-                <div class="bookRow" id="wishbook6">
-                    
-                </div>
-                <div class="bookRow" id="wishbook7">
-                    
-                </div>
-                <div class="bookRow" id="wishbook8">
-                    
-                </div>
-                <div class="bookRow" id="wishbook9">
-                    
-                </div>
-                <div class="bookRow" id="wishbook10">
+            <section class="wishlist" id="wishlistbooks">
+               
                     
                 </div>
                 <div class="totalPrice">
@@ -495,7 +436,12 @@
     </section>
 </footer>
 <script src="index.js"></script>
+<script src="index_a.js"></script>
+<script src="search.js"></script>
 <script src="nav.js"></script>
+<script src="wishlistButton.js"></script>
+
+
 </body>
 
 </html>

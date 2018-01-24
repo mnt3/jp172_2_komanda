@@ -31,11 +31,13 @@ function shutDown() {
 function browse() {
     shutDown();
     browseSection.style.display = "block";
+    allBooks("allBooks");
 }
 
 function buyBooks() {
     shutDown();
     buyBooksSection.style.display = "block";
+    allBooks("buyAllBooks");
 }
 
 function favoriteBooks() {
