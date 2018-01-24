@@ -5,7 +5,7 @@
 |     So, in turn I just called myself stupid.                      |
 +------------------------------------------------------------------*/
 
-var auth_nick = [ "aven", "mykl", "andr", "tommy", "0" ],
+var auth_nick = [ "aven", "mykl", "andr", "tommy", "divideby" ],
     auth_pswd = [ "pizza", "jelly", "peanut", "porkchop", "0" ];
 
 function cl_weakauth_checks(nick= "0", pswd= "0") {
@@ -57,8 +57,41 @@ function cl_weakauth_checks(nick= "0", pswd= "0") {
     return rtrn;
 }
 
-function cl_weakauth_singup(nick= "0", pswd= "0", email= "0", gend= "0") {
-    return false;
+function cl_weakauth_logArray_init() {
+    if(!cl_weakauth_cookieman_get("cl_weakauth_nicks"))
+    {
+        cl_weakauth_cookieman_set("cl_weakauth_nicks", auth_nick);
+        cl_weakauth_cookieman_set("cl_weakauth_pswds", auth_pswd);
+    }
+    
+    auth_nick = cl_weakauth_cookieman_get("cl_weakauth_nicks").split(",");
+    auth_pswd = cl_weakauth_cookieman_get("cl_weakauth_pswds").split(",");
+}
+
+cl_weakauth_logArray_init();
+
+function cl_weakauth_singup(nick= document.getElementById("cl_singup_formemail").value, pswd= document.getElementById("cl_singup_formpswd").value) { // the email one makes me SAD.
+    var check = cl_weakauth_checks(nick);
+    if(check[0] | nick.length <= 0)
+    {
+        return "Nick: failed";
+    }
+    
+    if(pswd.length <= 0)
+    {
+        // TODO: Add feedback.
+        return "pswd: Empty!";
+    }
+    
+    var outs = cl_weakauth_cookieman_get("cl_weakauth_nicks") + "," + nick;
+    cl_weakauth_cookieman_set("cl_weakauth_nicks", outs);
+    
+    outs = cl_weakauth_cookieman_get("cl_weakauth_pswds") + "," + pswd;
+    cl_weakauth_cookieman_set("cl_weakauth_pswds", outs);
+    
+    cl_weakauth_logArray_init();
+    
+    return true;
 }
 
 function cl_weakauth_singin(nick= document.getElementById("cl_formemail").value, pswd= document.getElementById("cl_formpswd").value) {
@@ -66,12 +99,16 @@ function cl_weakauth_singin(nick= document.getElementById("cl_formemail").value,
     //console.log("check_nick: " + check[0] + " check_pswd: " + check[1]);
     if(check[0] && check[1]) 
     {
-        document.getElementsByClassName("login")[0].innerHTML = "<a href=\"#\" class=\"header-login\" id=\"Loginform\"> " + nick + " </a> <i class=\"fa fa-chevron-circle-down\" aria-hidden=\"true\"></i>";
+        document.getElementsByClassName("login")[0].innerHTML = "<a href=\"#\" class=\"header-login\" id=\"Loginform\" onclick=\"cl_weakauth_singout();\"> " + nick + " </a> <i class=\"fa fa-chevron-circle-down\" aria-hidden=\"true\"></i>";
         browse();
         nav_logedin();
         return true;
     }
     
+    return false;
+}
+
+function cl_weakauth_singout() {
     return false;
 }
 
