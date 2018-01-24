@@ -29,12 +29,26 @@ function allBooks(id) {
     var e = document.getElementById(id);
     activeButton(e);
     hideBook();
-    for (var index = 0; index < bookArray.length; index++)
+    for (index = 0; index < 10; index++)
         if (id === 'buyAllBooks') {
             sukurtiBuy(bookArray[index]);
         }
         else {sukurtiDiv(bookArray[index]);}
         stargen(5, "starcreate");
+}
+var navLocator;
+function navigateBooks(k) {
+    i = 1;
+    iii = 1;
+    var start = ((k*10)-9);
+    var stop = k*10;
+    hideBook();
+    for (start; start <= stop; start++)
+        if (navLocator === "browse") {
+            sukurtiDiv(bookArray[start-1]);
+        }
+        else{sukurtiBuy(bookArray[start-1]);}
+    stargen(5, "starcreate");
 }
 
 function recentBooks(id) {
