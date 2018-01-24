@@ -22,6 +22,46 @@ var knyga7 = new knyga("knyga7","autorius4",10,"img/book_store/books/book-07.png
 var knyga8 = new knyga("knyga8","autorius2",8,"img/book_store/books/book-08.png",3.5,8);
 var knyga9 = new knyga("knyga9","autorius6",30,"img/book_store/books/book-09.png",5.0,9);
 var knyga10 = new knyga("knyga10","autorius3",0,"img/book_store/books/book-10.png",1.5,10);
+var knyga11 = new knyga("knyga11","autorius",10,"img/book_store/books/book-01.png",5.0,1);
+var knyga12 = new knyga("knyga12","autorius2",5,"img/book_store/books/book-02.png",3.0,2);
+var knyga13 = new knyga("knyga13","autorius3",15,"img/book_store/books/book-03.png",2.0,3);
+var knyga14 = new knyga("knyga14","autorius2",5,"img/book_store/books/book-04.png",4.0,4);
+var knyga15 = new knyga("knyga15","autorius",20,"img/book_store/books/book-05.png",5.0,5);
+var knyga16 = new knyga("knyga16","autorius2",7,"img/book_store/books/book-06.png",2.0,6);
+var knyga17 = new knyga("knyga17","autorius4",10,"img/book_store/books/book-07.png",2.5,7);
+var knyga18 = new knyga("knyga18","autorius2",8,"img/book_store/books/book-08.png",3.5,8);
+var knyga19 = new knyga("knyga19","autorius6",30,"img/book_store/books/book-09.png",5.0,9);
+var knyga20 = new knyga("knyga20","autorius3",0,"img/book_store/books/book-10.png",1.5,10);
+var knyga21 = new knyga("knyga21","autorius",10,"img/book_store/books/book-01.png",5.0,1);
+var knyga22 = new knyga("knyga22","autorius2",5,"img/book_store/books/book-02.png",3.0,2);
+var knyga23 = new knyga("knyga23","autorius3",15,"img/book_store/books/book-03.png",2.0,3);
+var knyga24 = new knyga("knyga24","autorius2",5,"img/book_store/books/book-04.png",4.0,4);
+var knyga25 = new knyga("knyga25","autorius",20,"img/book_store/books/book-05.png",5.0,5);
+var knyga26 = new knyga("knyga26","autorius2",7,"img/book_store/books/book-06.png",2.0,6);
+var knyga27 = new knyga("knyga27","autorius4",10,"img/book_store/books/book-07.png",2.5,7);
+var knyga28 = new knyga("knyga28","autorius2",8,"img/book_store/books/book-08.png",3.5,8);
+var knyga29 = new knyga("knyga29","autorius6",30,"img/book_store/books/book-09.png",5.0,9);
+var knyga30 = new knyga("knyga30","autorius3",0,"img/book_store/books/book-10.png",1.5,10);
+var knyga31 = new knyga("knyga31","autorius",10,"img/book_store/books/book-01.png",5.0,1);
+var knyga32 = new knyga("knyga32","autorius2",5,"img/book_store/books/book-02.png",3.0,2);
+var knyga33 = new knyga("knyga33","autorius3",15,"img/book_store/books/book-03.png",2.0,3);
+var knyga34 = new knyga("knyga34","autorius2",5,"img/book_store/books/book-04.png",4.0,4);
+var knyga35 = new knyga("knyga35","autorius",20,"img/book_store/books/book-05.png",5.0,5);
+var knyga36 = new knyga("knyga36","autorius2",7,"img/book_store/books/book-06.png",2.0,6);
+var knyga37 = new knyga("knyga37","autorius4",10,"img/book_store/books/book-07.png",2.5,7);
+var knyga38 = new knyga("knyga38","autorius2",8,"img/book_store/books/book-08.png",3.5,8);
+var knyga39 = new knyga("knyga39","autorius6",30,"img/book_store/books/book-09.png",5.0,9);
+var knyga40 = new knyga("knyga40","autorius3",0,"img/book_store/books/book-10.png",1.5,10);
+var knyga41 = new knyga("knyga41","autorius",10,"img/book_store/books/book-01.png",5.0,1);
+var knyga42 = new knyga("knyga42","autorius2",5,"img/book_store/books/book-02.png",3.0,2);
+var knyga43 = new knyga("knyga43","autorius3",15,"img/book_store/books/book-03.png",2.0,3);
+var knyga44 = new knyga("knyga44","autorius2",5,"img/book_store/books/book-04.png",4.0,4);
+var knyga45 = new knyga("knyga45","autorius",20,"img/book_store/books/book-05.png",5.0,5);
+var knyga46 = new knyga("knyga46","autorius2",7,"img/book_store/books/book-06.png",2.0,6);
+var knyga47 = new knyga("knyga47","autorius4",10,"img/book_store/books/book-07.png",2.5,7);
+var knyga48 = new knyga("knyga48","autorius2",8,"img/book_store/books/book-08.png",3.5,8);
+var knyga49 = new knyga("knyga49","autorius6",30,"img/book_store/books/book-09.png",5.0,9);
+var knyga50 = new knyga("knyga50","autorius3",0,"img/book_store/books/book-10.png",1.5,10);
 
 
 //bandymas ideti knyga i div
@@ -56,23 +96,6 @@ ikeltiIDIV.innerHTML="<div class=\"book\"> <img src="+knyga.imgSrc+" alt=\"cover
 i++;
 
 }
-sukurtiDiv(knyga1);
-sukurtiDiv(knyga2);
-sukurtiDiv(knyga2);
-sukurtiDiv(knyga2);
-sukurtiDiv(knyga2);
-sukurtiDiv(knyga1);
-sukurtiDiv(knyga1);
-sukurtiDiv(knyga2);
-sukurtiDiv(knyga1);
-sukurtiDiv(knyga2);
-sukurtiDiv(knyga2);
-sukurtiDiv(knyga2);
-sukurtiDiv(knyga2);
-sukurtiDiv(knyga1);
-sukurtiDiv(knyga1);
-sukurtiDiv(knyga2);
-stargen(5,"starcreate");
 
 /* funkcija isvalanti browser langa*/
 function isvalytiEkranaBrowser() {
@@ -105,17 +128,6 @@ var ikeltiIDIV2 = document.getElementById(ikelimoel2);
 
 iii++;
 }
-
-sukurtiBuy(knyga1);
-sukurtiBuy(knyga2);
-sukurtiBuy(knyga3);
-sukurtiBuy(knyga4);
-sukurtiBuy(knyga5);
-sukurtiBuy(knyga6);
-sukurtiBuy(knyga7);
-sukurtiBuy(knyga8);
-sukurtiBuy(knyga9);
-sukurtiBuy(knyga10);
 
 
 
@@ -182,27 +194,32 @@ atstatyti();
   
     b1.id ="footer-button-active";
     kintamasis=1;
+    navigateBooks(kintamasis);
 }
 function push_2() {
    atstatyti();
    b2.id ="footer-button-active";
    kintamasis=2;
+    navigateBooks(kintamasis);
 }
 function push_3() {
   atstatyti();
   b3.id ="footer-button-active";
   kintamasis=3;
+    navigateBooks(kintamasis);
 }
 function push_4() {
     atstatyti();
    b4.id ="footer-button-active";
-            cl_weakauth_singin(cl_weakauth_cookieman_get("catus_users"), cl_weakauth_cookieman_get("cokb_locked"));
+            // cl_weakauth_singin(cl_weakauth_cookieman_get("catus_users"), cl_weakauth_cookieman_get("cokb_locked"));
    kintamasis=4;
+    navigateBooks(kintamasis);
 }
 function push_5() {
     atstatyti();
    b5.id ="footer-button-active";
    kintamasis=5;
+    navigateBooks(kintamasis);
    
 }
 function atstatyti(){

@@ -32,12 +32,14 @@ function browse() {
     shutDown();
     browseSection.style.display = "block";
     allBooks("allBooks");
+    navLocator = "browse";
 }
 
 function buyBooks() {
     shutDown();
     buyBooksSection.style.display = "block";
     allBooks("buyAllBooks");
+    navLocator = "buyBooks";
 }
 
 function favoriteBooks() {
