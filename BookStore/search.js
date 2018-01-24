@@ -79,8 +79,10 @@ function popularBooks(id) {
         if (bookArray[index].rating >= 4) {
         if (id === 'buyPopularBooks') {
             sukurtiBuy(bookArray[index]);
+            stargen(5, "starcreate");
         }
-            else{sukurtiDiv(bookArray[index]);}
+            else{sukurtiDiv(bookArray[index]);
+                 stargen(5, "starcreate");}
         }
     stargen(5, "starcreate");
 }
