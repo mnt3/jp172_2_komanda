@@ -209,8 +209,8 @@
         <section class="login-section" id="singupSection">
                 <div class="login-form">
                     <input type="text" name="email" class="input" id="cl_singup_formemail" placeholder="Login">
-                    <p class="login_error" id="nicktaken">This login name has been taken.</p>
                     <input type="password" name="password" class="input" id="cl_singup_formpswd" placeholder="Password">
+                    <p class="login_error" id="nicktaken">This login name has been taken.</p>
                     <p class="login_error" id="nopswd">No password.</p>
                     <!--<input type="email" name="email" class="input" id="cl_singup_formail" placeholder="eMail"> -->
                     <button class="button" id="signOut" type="button" onclick="login();">Back</button>
@@ -270,15 +270,20 @@
 
         </section>
         
-        <section class="settings" id="settings">
+        <section class="login-section" id="settings">
             <div>
                 <h2>Change password:</h2>
-                <form action="changePassword" method="post" enctype="text/plain">
-                    <br>
-                    <p>Write your new password:</p>
-                    <input type="text" name="password"><br>
-
-                </form>
+                <div class="login-form">
+                    <form action="changePassword" method="post" enctype="text/plain">
+                        <input type="password" name="password" class="input" id="field_oldpswd" placeholder="Old Password">
+                        <input type="password" name="password" class="input" id="field_pswd" placeholder="New Password">
+                        <input type="password" name="password" class="input" id="field_repswd" placeholder="Re Eneter New Password">
+                        <p class="login_error" id="pswd_false">Incorrect password.</p>
+                        <p class="login_error" id="new_pswd_false">New passwords don't match or haven't been entered.</p>
+                        <p class="login_succe" id="new_pswd_true">Password change successful!</p>
+                        <button class="chpswd_button" id="signOut" type="button" onclick="cl_weakauth_chpswd();">Change Password</button>
+                    </form>
+                </div>
             </div>
 
             <div>

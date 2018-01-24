@@ -491,6 +491,36 @@ textarea:focus {
     color: crimson;
 }
 
+.login_succe {
+    color: forestgreen;
+}
+
+.chpswd_button {
+    height: 30px;
+    width: 200px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #97b3ce;
+    border: none;
+    color: white;
+    border-radius: 15px;
+    margin: 5px;
+    float: none;
+}
+
+.chpswd_button:active {
+    height: 30px;
+    width: 200px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #2f364a;
+    border: none;
+    color: white;
+    border-radius: 15px;
+    margin: 5px;
+    float: none;
+}
+
 .input {
     width: 195px;
     height: 30px;

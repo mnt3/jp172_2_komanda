@@ -15,12 +15,22 @@ var browseSection = document.getElementById("browse"),
     nav_footer_settings = document.getElementById("nav_footer_settings"),
 
     text_nicktaken = document.getElementById("nicktaken"),
-    text_nopswd = document.getElementById("nopswd");
+    text_nopswd = document.getElementById("nopswd"),
+    text_pswd_false = document.getElementById("pswd_false"),
+    text_new_pswd_false = document.getElementById("new_pswd_false"),
+    text_new_pswd_true = document.getElementById("new_pswd_true");
 
 shutDown();
 //browse();
 login();
 cl_weakauth_singin(cl_weakauth_cookieman_get("catus_users"), cl_weakauth_cookieman_get("cokb_locked"));
+
+function navTurnOff() {
+    document.getElementById('footer_buttons').style.display = 'none';
+}
+function navTurnOn() {
+    document.getElementById('footer_buttons').style.display = 'block';
+}
 
 function shutDown() {
     buyBooksSection.style.display = "none";
@@ -34,6 +44,9 @@ function shutDown() {
     singupSection.style.display = "none";
     text_nicktaken.style.display = "none";
     text_nopswd.style.display = "none";
+    text_pswd_false.style.display = "none";
+    text_new_pswd_false.style.display = "none";
+    text_new_pswd_true.style.display = "none";
 }
 
 function browse() {
@@ -41,6 +54,7 @@ function browse() {
     browseSection.style.display = "block";
     allBooks("allBooks");
     navLocator = "browse";
+    navTurnOn();
 }
 
 function buyBooks() {
@@ -48,16 +62,19 @@ function buyBooks() {
     buyBooksSection.style.display = "block";
     allBooks("buyAllBooks");
     navLocator = "buyBooks";
+    navTurnOn();
 }
 
 function favoriteBooks() {singupSection
     shutDown();
     favBooksSection.style.display = "block";
+    navTurnOff();
 }
 
 function wishlist() {
     shutDown();
     wishlistSection.style.display = "block";
+    navTurnOff();
 }
 
 function help() {
