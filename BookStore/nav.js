@@ -17,7 +17,8 @@ var browseSection = document.getElementById("browse"),
     text_nicktaken = document.getElementById("nicktaken"),
     text_nopswd = document.getElementById("nopswd"),
     text_pswd_false = document.getElementById("pswd_false"),
-    text_new_pswd_false = document.getElementById("new_pswd_false");
+    text_new_pswd_false = document.getElementById("new_pswd_false"),
+    text_new_pswd_true = document.getElementById("new_pswd_true");
 
 shutDown();
 //browse();
@@ -38,6 +39,7 @@ function shutDown() {
     text_nopswd.style.display = "none";
     text_pswd_false.style.display = "none";
     text_new_pswd_false.style.display = "none";
+    text_new_pswd_true.style.display = "none";
 }
 
 function browse() {
