@@ -64,8 +64,13 @@ function cl_weakauth_logArray_init() {
         cl_weakauth_cookieman_set("cl_weakauth_pswds", auth_pswd);
     }
     
-    auth_nick = cl_weakauth_cookieman_get("cl_weakauth_nicks").split(",");
-    auth_pswd = cl_weakauth_cookieman_get("cl_weakauth_pswds").split(",");
+    if(cl_weakauth_cookieman_get("cl_weakauth_nicks"))
+    {
+        auth_nick = cl_weakauth_cookieman_get("cl_weakauth_nicks").split(",");
+        auth_pswd = cl_weakauth_cookieman_get("cl_weakauth_pswds").split(",");
+        return true;
+    }
+    return false;
 }
 
 cl_weakauth_logArray_init();
@@ -125,6 +130,44 @@ function cl_weakauth_singout() {
     login();
     nav_logedout();
     return true;
+}
+
+function cl_weakauth_chpswd(oldpswd = document.getElementById("field_oldpswd"), pswd = document.getElementById("field_pswd"), repswd = document.getElementById("field_repswd")) {
+    var val = cl_weakauth_cookieman_get("catus_users");
+    for (itter = 0; auth_nick.length > itter; itter++)
+    {        
+        if (auth_nick[itter] == val) 
+        {            
+            if(auth_pswd[itter] == oldpswd)
+            {
+                if(pswd == repswd && pswd && repswd)
+                {
+                    if(cl_weakauth_cookieman_get("cl_weakauth_nicks"))
+                    {
+                        val = cl_weakauth_cookieman_get("cl_weakauth_pswds").split(",");
+                        val[itter] = pswd;
+                        cl_weakauth_cookieman_set("cl_weakauth_pswds", val);
+                        cl_weakauth_cookieman_set("cokb_locked", pswd);
+                        cl_weakauth_logArray_init();
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
+    }
+    return false;
 }
 
 function cl_weakauth_cookieman_get(cookie_name= "") {
