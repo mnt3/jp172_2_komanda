@@ -474,6 +474,10 @@ textarea:focus {
     margin: auto;
 }
 
+.login_error {
+    color: crimson;
+}
+
 .input {
     width: 195px;
     height: 30px;

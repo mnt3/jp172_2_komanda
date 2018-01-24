@@ -6,11 +6,16 @@ var browseSection = document.getElementById("browse"),
     helpCenterSection = document.getElementById("helpCenter"),
     supportCenterSection = document.getElementById("supportCenter"),
     settingsSection = document.getElementById("settings"),
+    singupSection = document.getElementById("singupSection"),
     
     nav_browse = document.getElementById("nav_browse"),
     nav_buybooks = document.getElementById("nav_buybooks"),
     nav_favoriteBooks = document.getElementById("nav_favoriteBooks"),
-    nav_wishlist = document.getElementById("nav_wishlist");
+    nav_wishlist = document.getElementById("nav_wishlist"),
+    nav_footer_settings = document.getElementById("nav_footer_settings"),
+
+    text_nicktaken = document.getElementById("nicktaken"),
+    text_nopswd = document.getElementById("nopswd");
 
 shutDown();
 //browse();
@@ -26,6 +31,9 @@ function shutDown() {
     supportCenterSection.style.display = "none";
     settingsSection.style.display = "none";
     browseSection.style.display = "none";
+    singupSection.style.display = "none";
+    text_nicktaken.style.display = "none";
+    text_nopswd.style.display = "none";
 }
 
 function browse() {
@@ -42,7 +50,7 @@ function buyBooks() {
     navLocator = "buyBooks";
 }
 
-function favoriteBooks() {
+function favoriteBooks() {singupSection
     shutDown();
     favBooksSection.style.display = "block";
 }
@@ -68,6 +76,12 @@ function login() {
     loginSection.style.display = "block";
 }
 
+function singup() {
+    shutDown();
+    nav_logedout();
+    singupSection.style.display = "block";
+}
+
 function settings() {
     shutDown();
     settingsSection.style.display = "block";
@@ -77,10 +91,12 @@ function nav_logedout () {
     nav_buybooks.style.display = "none";
     nav_favoriteBooks.style.display = "none";
     nav_wishlist.style.display = "none";
+    nav_footer_settings.style.display = "none";
 }
 
 function nav_logedin () {    
     nav_buybooks.style.display = "block";
     nav_favoriteBooks.style.display = "block";
     nav_wishlist.style.display = "block";
+    nav_footer_settings.style.display = "block";
 }

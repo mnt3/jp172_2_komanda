@@ -203,9 +203,21 @@
                     <input type="text" name="email" class="input" id="cl_formemail" placeholder="Login">
                     <input type="password" name="password" class="input" id="cl_formpswd" placeholder="Password">
                     <button class="button" id="signIn" type="button" onclick="cl_weakauth_singin();">Sign In</button>
-                    <button class="button" id="signOut" type="button" onclick="cl_weakauth_singup();">Sign Out</button>
+                    <button class="button" id="signOut" type="button" onclick="singup();">Sign Up</button>
                 </div>
-        </section>        <section class="helpCenter" id="helpCenter">
+        </section> 
+        <section class="login-section" id="singupSection">
+                <div class="login-form">
+                    <input type="text" name="email" class="input" id="cl_singup_formemail" placeholder="Login">
+                    <p class="login_error" id="nicktaken">This login name has been taken.</p>
+                    <input type="password" name="password" class="input" id="cl_singup_formpswd" placeholder="Password">
+                    <p class="login_error" id="nopswd">No password.</p>
+                    <!--<input type="email" name="email" class="input" id="cl_singup_formail" placeholder="eMail"> -->
+                    <button class="button" id="signOut" type="button" onclick="login();">Back</button>
+                    <button class="button" id="signOut" type="button" onclick="cl_weakauth_singup();">Sign up</button>
+                </div>
+        </section>        
+        <section class="helpCenter" id="helpCenter">
             <div>
                 <h2>Book story user instructions</h2>
                 <p>In browse page you can search a book in search field. </p>
@@ -303,7 +315,7 @@
             </a>
         </div>
 
-        <div class="footer-settings">
+        <div class="footer-settings" id="nav_footer_settings">
             <a href="#" onclick="settings()">
                 <i class="fa fa-cog" aria-hidden="true"></i>
             </a>

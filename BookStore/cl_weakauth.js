@@ -74,13 +74,15 @@ function cl_weakauth_singup(nick= document.getElementById("cl_singup_formemail")
     var check = cl_weakauth_checks(nick);
     if(check[0] | nick.length <= 0)
     {
-        // TODO: Add feedback.
+        text_nicktaken.style.display = "block";
+        text_nopswd.style.display = "none";
         return "Nick: failed";
     }
     
     if(pswd.length <= 0)
     {
-        // TODO: Add feedback.
+        text_nicktaken.style.display = "none";
+        text_nopswd.style.display = "block";
         return "pswd: Empty!";
     }
     
@@ -88,8 +90,7 @@ function cl_weakauth_singup(nick= document.getElementById("cl_singup_formemail")
     cl_weakauth_cookieman_set("cl_weakauth_pswds", cl_weakauth_cookieman_get("cl_weakauth_pswds") + "," + pswd);
     
     cl_weakauth_logArray_init();
-    
-        // TODO: switch back to singin form.
+    login();
     
     return true;
 }
