@@ -24,10 +24,7 @@ var knyga9 = new knyga("knyga9","autorius6",30,"img/book_store/books/book-09.png
 var knyga10 = new knyga("knyga10","autorius3",0,"img/book_store/books/book-10.png",1.5,10);
 
 
-//bandymas ideti knyga i div
-//var img = document.getElementsByTagName("img");
-//img[0].hasAttribute("src");
-//img[0].setAttribute("src","img/book_store/books/book-03.png");
+
 
 
 
@@ -142,16 +139,6 @@ sukurtiFavoriteBook(knyga3);
 
 /* funkcija atvaizdavimui wishlistui listui*/
 
-////var div = document.createElement("div");
-////div.className ="book";
-//var paveikslas = document.createElement("img");
-//paveikslas.setAttribute("src", knyga.imgSrc);
-//paveikslas.src = knyga.imgSrc;
-//paveikslas.src ="img/book_store/books/book-01.png";
-////document.getElementById("knygos").appendChild(div);
-
-//div.appendChild(paveikslas);
-////div.innerText=knyga.name;
 
 var iiiii=1;
 function sukurtiWishlist(knyga){

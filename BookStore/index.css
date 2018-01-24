@@ -451,9 +451,10 @@ textarea:focus {
     margin: 0;
 }
 
-  /*Help Center styles */
+  
 .helpCenter{
-     display: flex;
+    font-family: 'myriad';
+
    
 }
 .helpCenter p{
@@ -462,6 +463,15 @@ textarea:focus {
 }
 .helpCenter div {
     padding: 10px;
+}
+.helpCenter ul {
+    list-style-type: none;
+}
+.instr {
+    float: left;
+}
+.paiment{
+    float: left;
 }
 
 .login-section {
