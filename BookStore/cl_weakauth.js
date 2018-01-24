@@ -57,8 +57,8 @@ function cl_weakauth_checks(nick= "0", pswd= "0") {
     return rtrn;
 }
 
-function cl_weakauth_logArray_init() {
-    if(!cl_weakauth_cookieman_get("cl_weakauth_nicks"))
+function cl_weakauth_logArray_init(reset = false) {
+    if(!cl_weakauth_cookieman_get("cl_weakauth_nicks") | reset)
     {
         cl_weakauth_cookieman_set("cl_weakauth_nicks", auth_nick);
         cl_weakauth_cookieman_set("cl_weakauth_pswds", auth_pswd);
@@ -91,10 +91,13 @@ function cl_weakauth_singup(nick= document.getElementById("cl_singup_formemail")
         return "pswd: Empty!";
     }
     
-    cl_weakauth_cookieman_set("cl_weakauth_nicks", cl_weakauth_cookieman_get("cl_weakauth_nicks") + "," + nick);
-    cl_weakauth_cookieman_set("cl_weakauth_pswds", cl_weakauth_cookieman_get("cl_weakauth_pswds") + "," + pswd);
+    //cl_weakauth_cookieman_set("cl_weakauth_nicks", cl_weakauth_cookieman_get("cl_weakauth_nicks") + "," + nick);
+    //cl_weakauth_cookieman_set("cl_weakauth_pswds", cl_weakauth_cookieman_get("cl_weakauth_pswds") + "," + pswd);
     
-    cl_weakauth_logArray_init();
+    auth_nick.push(nick);
+    auth_pswd.push(pswd);
+    
+    cl_weakauth_logArray_init(true);
     login();
     
     return true;

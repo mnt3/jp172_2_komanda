@@ -15,7 +15,9 @@ var browseSection = document.getElementById("browse"),
     nav_footer_settings = document.getElementById("nav_footer_settings"),
 
     text_nicktaken = document.getElementById("nicktaken"),
-    text_nopswd = document.getElementById("nopswd");
+    text_nopswd = document.getElementById("nopswd"),
+    text_pswd_false = document.getElementById("pswd_false"),
+    text_new_pswd_false = document.getElementById("new_pswd_false");
 
 shutDown();
 //browse();
@@ -34,6 +36,8 @@ function shutDown() {
     singupSection.style.display = "none";
     text_nicktaken.style.display = "none";
     text_nopswd.style.display = "none";
+    text_pswd_false.style.display = "none";
+    text_new_pswd_false.style.display = "none";
 }
 
 function browse() {
