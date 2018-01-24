@@ -101,7 +101,7 @@ var ikeltiIDIV2 = document.getElementById(ikelimoel2);
     ikeltiIDIV2.style.display = 'block';
 
 
-   ikeltiIDIV2.innerHTML="<div class=\"book\" id="+ikelimoel2+"> <img src="+knyga.imgSrc+" alt=\"cover\"> <h4>"+knyga.name+"</h4> <p>"+knyga.author+"</p> <p>"+knyga.rating+"</p> <div class=\"price\"> <p>Price: </p><p id=\"buyBooks-bookprice"+iii+"\">"+knyga.price+" Eur</p> </div> <button class=\"buybook\" id=\"buybook"+iii+"\" onclick=\"wishbuttonpush("+iii+")\">Add to Wishlist</button> </div>";
+   ikeltiIDIV2.innerHTML="<div class=\"book\" id="+ikelimoel2+"> <img src="+knyga.imgSrc+" alt=\"cover\"> <h4>"+knyga.name+"</h4> <p>"+knyga.author+"</p> <p>"+knyga.rating+"</p> <div class=\"price\"> <p>Price: </p><p id=\"buyBooks-bookprice"+iii+"\">"+knyga.price+" Eur</p> </div> <button class=\"buybook\" id=\"buybook"+iii+"\" onclick=\"wishbuttonpush("+knyga.id+")\">Add to Wishlist</button> </div>";
 
 iii++;
 }
@@ -161,7 +161,7 @@ ikeltiIDIV3.innerHTML=" <img src="+knyga.imgSrc+" alt=\"cover\"> <h4  id=\"favor
 iiiii++;
 }
 
-sukurtiWishlist(knyga2);
+
 
 
 
