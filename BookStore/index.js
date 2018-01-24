@@ -52,7 +52,7 @@ var ikelimoel="brBook"+i+"";
 var ikeltiIDIV = document.getElementById(ikelimoel);
     ikeltiIDIV.style.display = 'block';
 
-ikeltiIDIV.innerHTML="<div class=\"book\"> <img src="+knyga.imgSrc+" alt=\"cover\"> <h4>"+knyga.name+"</h4> <p>"+knyga.author+"</p> <p class=\"starcreate\">"+knyga.rating+"</p>  </div>";
+ikeltiIDIV.innerHTML=" <img src="+knyga.imgSrc+" alt=\"cover\"> <h4>"+knyga.name+"</h4> <p>"+knyga.author+"</p> <p class=\"starcreate\">"+knyga.rating+"</p>  ";
 i++;
 
 }
@@ -101,7 +101,7 @@ var ikeltiIDIV2 = document.getElementById(ikelimoel2);
     ikeltiIDIV2.style.display = 'block';
 
 
-   ikeltiIDIV2.innerHTML="<div class=\"book\" id="+ikelimoel2+"> <img src="+knyga.imgSrc+" alt=\"cover\"> <h4>"+knyga.name+"</h4> <p>"+knyga.author+"</p> <p>"+knyga.rating+"</p> <div class=\"price\"> <p>Price: </p><p id=\"buyBooks-bookprice"+iii+"\">"+knyga.price+" Eur</p> </div> <button class=\"buybook\" id=\"buybook"+iii+"\" onclick=\"wishbuttonpush("+knyga.id+")\">Add to Wishlist</button> </div>";
+   ikeltiIDIV2.innerHTML=" <img src="+knyga.imgSrc+" alt=\"cover\"> <h4>"+knyga.name+"</h4> <p>"+knyga.author+"</p> <p>"+knyga.rating+"</p> <div class=\"price\"> <p>Price: </p><p id=\"buyBooks-bookprice"+iii+"\">"+knyga.price+" Eur</p> </div> <button class=\"buybook\" id=\"buybook"+iii+"\" onclick=\"wishbuttonpush("+knyga.id+")\">Add to Wishlist</button> ";
 
 iii++;
 }
@@ -123,43 +123,54 @@ sukurtiBuy(knyga10);
 
 var iiii=1;
 function sukurtiFavoriteBook(knyga){
+    var div = document.createElement("div");
+    div.className ="bookRow";
+    document.getElementById("fvbooks").appendChild(div);
 
 var ikelimoel3="favbook"+iiii+"";
 
 var ikeltiIDIV3 = document.getElementById(ikelimoel3);
     
-ikeltiIDIV3.innerHTML=" <img src="+knyga.imgSrc+" alt=\"cover\"> <h4  id=\"favoriteBooks-title"+iiii+"\">"+knyga.name+"</h4> <p favoriteBooks-author"+iiii+">"+knyga.author+"</p>  ";
+div.innerHTML=" <img src="+knyga.imgSrc+" alt=\"cover\"> <h4  id=\"favoriteBooks-title"+iiii+"\">"+knyga.name+"</h4> <p favoriteBooks-author"+iiii+">"+knyga.author+"</p>  ";
 
 iiii++;
 }
 sukurtiFavoriteBook(knyga1);
-sukurtiFavoriteBook(knyga1);
-sukurtiFavoriteBook(knyga2);
-sukurtiFavoriteBook(knyga1);
-sukurtiFavoriteBook(knyga1);
-sukurtiFavoriteBook(knyga2);
-sukurtiFavoriteBook(knyga1);
-sukurtiFavoriteBook(knyga1);
-sukurtiFavoriteBook(knyga2);
-sukurtiFavoriteBook(knyga1);
+sukurtiFavoriteBook(knyga3);
 
 
 
 /* funkcija atvaizdavimui wishlistui listui*/
 
+////var div = document.createElement("div");
+////div.className ="book";
+//var paveikslas = document.createElement("img");
+//paveikslas.setAttribute("src", knyga.imgSrc);
+//paveikslas.src = knyga.imgSrc;
+//paveikslas.src ="img/book_store/books/book-01.png";
+////document.getElementById("knygos").appendChild(div);
+
+//div.appendChild(paveikslas);
+////div.innerText=knyga.name;
+
 var iiiii=1;
 function sukurtiWishlist(knyga){
+    var div = document.createElement("div");
+    div.className ="bookRow";
+    document.getElementById("wishlistbooks").appendChild(div);
 
 var ikelimoel3="wishbook"+iiiii+"";
 
 var ikeltiIDIV3 = document.getElementById(ikelimoel3);
-    
-ikeltiIDIV3.innerHTML=" <img src="+knyga.imgSrc+" alt=\"cover\"> <h4  id=\"favoriteBooks-title"+iiiii+"\">"+knyga.name+"</h4> <p favoriteBooks-author"+iiiii+">"+knyga.author+"</p> <div class=\"price\"> <p>Price: </p><p id=\"buyBooks-bookprice"+iiiii+"\">"+knyga.price+" Eur</p> </div> ";
+  
+div.innerHTML=" <img src="+knyga.imgSrc+" alt=\"cover\"> <h4  id=\"favoriteBooks-title"+iiiii+"\">"+knyga.name+"</h4> <p favoriteBooks-author"+iiiii+">"+knyga.author+"</p> <div class=\"price\"> <p>Price: </p><p id=\"buyBooks-bookprice"+iiiii+"\">"+knyga.price+" Eur</p> </div> ";
     
   
 
 iiiii++;
 }
+
+
 
 
 
@@ -196,7 +207,7 @@ function push_3() {
 function push_4() {
     atstatyti();
    b4.id ="footer-button-active";
-            cl_weakauth_singin(cl_weakauth_cookieman_get("catus_users"), cl_weakauth_cookieman_get("cokb_locked"));
+            //cl_weakauth_singin(cl_weakauth_cookieman_get("catus_users"), cl_weakauth_cookieman_get("cokb_locked"));
    kintamasis=4;
 }
 function push_5() {

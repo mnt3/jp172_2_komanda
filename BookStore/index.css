@@ -315,7 +315,10 @@ input[type=text]:focus {
 .totalPrice {
     margin: 20px;
     width: 100px;
-    float: right;
+    position: fixed;
+    top: 50px;
+    right: 20px;
+    
 }
 
 .totalPrice h1 {
