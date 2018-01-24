@@ -74,6 +74,7 @@ function cl_weakauth_singup(nick= document.getElementById("cl_singup_formemail")
     var check = cl_weakauth_checks(nick);
     if(check[0] | nick.length <= 0)
     {
+        // TODO: Add feedback.
         return "Nick: failed";
     }
     
@@ -83,13 +84,12 @@ function cl_weakauth_singup(nick= document.getElementById("cl_singup_formemail")
         return "pswd: Empty!";
     }
     
-    var outs = cl_weakauth_cookieman_get("cl_weakauth_nicks") + "," + nick;
-    cl_weakauth_cookieman_set("cl_weakauth_nicks", outs);
-    
-    outs = cl_weakauth_cookieman_get("cl_weakauth_pswds") + "," + pswd;
-    cl_weakauth_cookieman_set("cl_weakauth_pswds", outs);
+    cl_weakauth_cookieman_set("cl_weakauth_nicks", cl_weakauth_cookieman_get("cl_weakauth_nicks") + "," + nick);
+    cl_weakauth_cookieman_set("cl_weakauth_pswds", cl_weakauth_cookieman_get("cl_weakauth_pswds") + "," + pswd);
     
     cl_weakauth_logArray_init();
+    
+        // TODO: switch back to singin form.
     
     return true;
 }
@@ -104,6 +104,7 @@ function cl_weakauth_singin(nick= document.getElementById("cl_formemail").value,
         nav_logedin();
         cl_weakauth_cookieman_set("catus_users", nick);
         cl_weakauth_cookieman_set("cokb_locked", pswd);
+        
         return true;
     }
     
@@ -111,7 +112,18 @@ function cl_weakauth_singin(nick= document.getElementById("cl_formemail").value,
 }
 
 function cl_weakauth_singout() {
-    return false;
+    document.getElementsByClassName("login")[0].innerHTML = "<a href=\"#\" class=\"header-login\" id=\"Loginform\" onclick=\"login()\">Login<i class=\"fa fa-chevron-circle-down\" aria-hidden=\"true\"></i></a>";    
+        
+    document.getElementById("cl_formemail").value = "";
+    document.getElementById("cl_formpswd").value = "";
+    
+    // CODE RED, CODE RED, BURN THE EVIDANCE AND RUN!
+    cl_weakauth_cookieman_del("catus_users");
+    cl_weakauth_cookieman_del("cokb_locked");
+    
+    login();
+    nav_logedout();
+    return true;
 }
 
 function cl_weakauth_cookieman_get(cookie_name= "") {
