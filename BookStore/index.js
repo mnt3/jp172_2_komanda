@@ -94,7 +94,7 @@ function sukurtiBuy(knyga) {
     var ikelimoel2 = "book" + iii + "";
     var ikeltiIDIV2 = document.getElementById(ikelimoel2);
     ikeltiIDIV2.style.display = 'block';
-    ikeltiIDIV2.innerHTML = " <img src=" + knyga.imgSrc + " alt=\"cover\"> <h4>" + knyga.name + "</h4> <p>" + knyga.author + "</p> <p>" + knyga.rating + "</p> <div class=\"price\"> <p>Price: </p><p id=\"buyBooks-bookprice" + iii + "\">" + knyga.price + " Eur</p> </div> <button class=\"buybook\" id=\"buybook" + iii + "\" onclick=\"wishbuttonpush(" + knyga.id + ")\">Add to Wishlist</button> ";
+    ikeltiIDIV2.innerHTML = " <img src=" + knyga.imgSrc + " alt=\"cover\"> <h4>" + knyga.name + "</h4> <p>" + knyga.author + "</p>  <div class=\"price\"> <p>Price: </p><p id=\"buyBooks-bookprice" + iii + "\">" + knyga.price + " Eur</p> </div> <button class=\"buybook\" id=\"buybook" + iii + "\" onclick=\"wishbuttonpush(" + knyga.id + ")\">Add to Wishlist</button> ";
 
     iii++;
 }
