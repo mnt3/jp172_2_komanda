@@ -22,6 +22,13 @@ shutDown();
 login();
 cl_weakauth_singin(cl_weakauth_cookieman_get("catus_users"), cl_weakauth_cookieman_get("cokb_locked"));
 
+function navTurnOff() {
+    document.getElementById('footer_buttons').style.display = 'none';
+}
+function navTurnOn() {
+    document.getElementById('footer_buttons').style.display = 'block';
+}
+
 function shutDown() {
     buyBooksSection.style.display = "none";
     favBooksSection.style.display = "none";
@@ -41,6 +48,7 @@ function browse() {
     browseSection.style.display = "block";
     allBooks("allBooks");
     navLocator = "browse";
+    navTurnOn();
 }
 
 function buyBooks() {
@@ -48,16 +56,19 @@ function buyBooks() {
     buyBooksSection.style.display = "block";
     allBooks("buyAllBooks");
     navLocator = "buyBooks";
+    navTurnOn();
 }
 
 function favoriteBooks() {singupSection
     shutDown();
     favBooksSection.style.display = "block";
+    navTurnOff();
 }
 
 function wishlist() {
     shutDown();
     wishlistSection.style.display = "block";
+    navTurnOff();
 }
 
 function help() {
