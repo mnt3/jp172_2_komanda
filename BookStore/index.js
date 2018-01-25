@@ -67,7 +67,7 @@ function sukurtiDiv(knyga) {
     var ikelimoel = "brBook" + i + "";
     var ikeltiIDIV = document.getElementById(ikelimoel);
     ikeltiIDIV.style.display = 'block';
-    ikeltiIDIV.innerHTML = " <img src=" + knyga.imgSrc + " alt=\"cover\" onclick=\"favbuttonpush(" + knyga.id + ")\"> <h4>" + knyga.name + "</h4> <p>" + knyga.author + "</p> <p class=\"starcreate\">" + knyga.rating + "</p>  ";
+    ikeltiIDIV.innerHTML = " <img src=" + knyga.imgSrc + " alt=\"cover\" <img onclick='sukurtiFavoriteBook(knyga" + i + ")'onclick=\"favbuttonpush(" + knyga.id + ")\"> <h4>" + knyga.name + "</h4> <p>" + knyga.author + "</p> <p class=\"starcreate\">" + knyga.rating + "</p>  ";
     i++;
 
 }
@@ -102,9 +102,13 @@ function sukurtiBuy(knyga) {
 
 
 /* funkcija atvaizdavimui favorite listui*/
-
+var favouriteBookIds = {};
 var iiii = 1;
 function sukurtiFavoriteBook(knyga) {
+    if (favouriteBookIds[knyga.id]) {
+        return;
+    }
+    
     var div = document.createElement("div");
     div.className = "bookRow";
     div.id = "fvboon"+knyga.id;
@@ -114,6 +118,7 @@ function sukurtiFavoriteBook(knyga) {
     div.innerHTML = " <img src=" + knyga.imgSrc + " alt=\"cover\"> <h4  id=\"favoriteBooks-title" + iiii + "\">" + knyga.name + "</h4> <p favoriteBooks-author" + iiii + ">" + knyga.author + "</p>  ";
 
     iiii++;
+     favouriteBookIds[knyga.id] = true;
 }
 
 
