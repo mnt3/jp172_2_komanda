@@ -1,11 +1,12 @@
+var fullstar = "img/book_store/rating/star_full.svg",
+    halfstar = "img/book_store/rating/star_half.svg",
+    emptystar = "img/book_store/rating/star_empty.svg";
+
 function stargen(star_amount= 5, classname= "rating_star") // Remove // from console.log for extra info while debuging
 {
     classname = classname.trim();
     
-    var fullstar = "img/book_store/rating/star_full.svg",
-    halfstar = "img/book_store/rating/star_half.svg",
-    emptystar = "img/book_store/rating/star_empty.svg",
-    starmass = document.getElementsByClassName(classname);                
+    var starmass = document.getElementsByClassName(classname);                
                 
      for (v=0; v < starmass.length; v++) 
      {
@@ -40,4 +41,33 @@ function stargen(star_amount= 5, classname= "rating_star") // Remove // from con
         //console.log(starmass[v] + " (" + v + ")" + " star loop triggers: " + triggers);
         starmass[v].innerHTML = finalout;
     }
+}
+
+function stargen_obj(rating = 2.5, star_amount= 5, classname= "rating_star")
+{
+    classname = classname.trim();
+    var finalout = "";
+    if(isNaN(rating)) 
+    {
+        return;
+    }
+            
+        for (i = 0; i < star_amount; i++) 
+        {
+            if (rating > 0.8) 
+            {
+                finalout = finalout + "<img class=\"img_" + classname + "\" src=" + fullstar + " />";
+                rating--;
+            }
+            else if (0.25 < rating && rating < 0.8) // Ayyy, nice numbers.
+            {
+                finalout = finalout + "<img class=\"img_" + classname + "\" src=" + halfstar + " />";
+                rating--;
+            }
+            else if (rating < 0.25) 
+            {
+                finalout = finalout + "<img class=\"img_" + classname + "\" src=" + emptystar + " />";
+            }
+        }
+    return finalout;
 }
